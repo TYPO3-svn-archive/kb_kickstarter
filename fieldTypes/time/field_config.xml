@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<kb_kickstarter>
+	<propertyName>LLL:EXT:kb_kickstarter/fieldTypes/time/locallang.xml:property_name</propertyName>
+	<propertyValue>time</propertyValue>
+	<propertyIcon>EXT:kb_kickstarter/fieldTypes/time/prop_icon.png</propertyIcon>
+</kb_kickstarter>

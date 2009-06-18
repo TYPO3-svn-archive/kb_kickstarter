@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Property labels for kb_kickstart propery "files"</description>
+		<type>database</type>
+		<csh_table></csh_table>
+		<fileId>EXT:kb_kickstarter/fieldTypes/files/locallang.xml</fileId>
+		<labelContext type="array">
+			<label index="property_name"></label>
+			<label index="field.size"></label>
+			<label index="field.max"></label>
+			<label index="field.default"></label>
+			<label index="field.eval"></label>
+			<label index="field.is_in"></label>
+		</labelContext>
+		<ext_filename_template>EXT:csh_###LANGKEY###/kb_kickstarter/fieldTypes/files/###LANGKEY###.locallang.xml</ext_filename_template>
+		<keep_original_text type="integer">1</keep_original_text>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="property_name">Files</label>
+			<label index="field.size">Field height</label>
+			<label index="field.autoSizeMax">Maximal field height</label>
+			<label index="field.max_size">Maximal file size (in KB)</label>
+			<label index="field.maxitems">Maximal number of files</label>
+			<label index="field.minitems">Minimal number of files</label>
+			<label index="field.allowed">Allowed file extensions</label>
+			<label index="field.disallowed">Disallowed file extensions</label>
+			<label index="field.useMM">Use MM relation</label>
+			<label index="field.show_thumbs">Show thumbnails</label>
+		</languageKey>
+	</data>
+</T3locallang>

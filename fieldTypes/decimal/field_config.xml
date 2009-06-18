@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<kb_kickstarter>
+	<propertyName>LLL:EXT:kb_kickstarter/fieldTypes/decimal/locallang.xml:property_name</propertyName>
+	<propertyValue>decimal</propertyValue>
+	<propertyIcon>EXT:kb_kickstarter/fieldTypes/decimal/prop_icon.png</propertyIcon>
+</kb_kickstarter>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable type="integer">1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.basic</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<subprops type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/tabcontainer/locallang.xml:field.subprops</label>
+							<config>
+								<type>select</type>
+								<size>10</size>
+								<maxitems>20</size>
+								<minitems>1</size>
+								<foreign_table>tx_kbkickstarter_fields</foreign_table>
+							</config>
+						</TCEforms>
+					</subprops>
+				</el>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

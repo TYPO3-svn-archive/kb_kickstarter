@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<type>array</type>
+	<ROOT>
+		<TCEforms>
+			<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.language</sheetTitle>
+		</TCEforms>
+		<el>
+				<prop_l10n_mode type="array">
+					<TCEforms>
+						<label>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_mode</label>
+						<config>
+							<type>select</type>
+							<size>1</size>
+							<maxitems>1</maxitems>
+							<minitems>1</minitems>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<numIndex index="0">LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_mode.default</numIndex>
+									<numIndex index="1"></numIndex>
+									<numIndex index="2"></numIndex>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<numIndex index="0">LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_mode.exclude</numIndex>
+									<numIndex index="1">exclude</numIndex>
+									<numIndex index="2"></numIndex>
+								</numIndex>
+								<numIndex index="2" type="array">
+									<numIndex index="0">LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_mode.mergeIfNotBlank</numIndex>
+									<numIndex index="1">mergeIfNotBlank</numIndex>
+									<numIndex index="2"></numIndex>
+								</numIndex>
+								<numIndex index="3" type="array">
+									<numIndex index="0">LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_mode.noCopy</numIndex>
+									<numIndex index="1">noCopy</numIndex>
+									<numIndex index="2"></numIndex>
+								</numIndex>
+								<numIndex index="4" type="array">
+									<numIndex index="0">LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_mode.prefixLangTitle</numIndex>
+									<numIndex index="1">prefixLangTitle</numIndex>
+									<numIndex index="2"></numIndex>
+								</numIndex>
+							</items>
+						</config>
+					</TCEforms>
+				</prop_l10n_mode>
+		</el>
+	</ROOT>
+</T3DataStructure>

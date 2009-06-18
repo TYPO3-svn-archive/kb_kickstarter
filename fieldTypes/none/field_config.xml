@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<kb_kickstarter>
+	<propertyName>LLL:EXT:kb_kickstarter/fieldTypes/none/locallang.xml:property_name</propertyName>
+	<propertyValue>none</propertyValue>
+	<propertyIcon>EXT:kb_kickstarter/fieldTypes/none/prop_icon.png</propertyIcon>
+</kb_kickstarter>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<kb_kickstarter>
+	<propertyName>LLL:EXT:kb_kickstarter/fieldTypes/todo_rte/locallang.xml:property_name</propertyName>
+	<propertyValue>rte</propertyValue>
+	<propertyIcon>EXT:kb_kickstarter/fieldTypes/rte/prop_icon.png</propertyIcon>
+</kb_kickstarter>

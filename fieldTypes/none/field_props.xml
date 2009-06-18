@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable type="integer">1</langDisable>
+	</meta>
+	<ROOT>
+		<type>array</type>
+		<el>
+			<size type="array">
+				<TCEforms>
+					<label></label>
+					<config>
+						<type>user</type>
+						<userFunc>EXT:kb_kickstarter/class.tx_kbkickstarter_misc.php:tx_kbkickstarter_misc->emptyString</userFunc>
+					</config>
+				</TCEforms>
+			</size>
+		</el>
+	</ROOT>
+</T3DataStructure>

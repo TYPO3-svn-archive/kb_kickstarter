@@ -1,0 +1,17 @@
+
+The question raised wheter it would be better to have the properties-table only containing "real" database fields.
+
+Or if the table shall contain a "flexform" field, in which all the properties for different types of properties get
+stored. 
+
+The advantages of storing all property-information in database fields, would be that search for specific properties
+is easier, data can get pulled out of database and used directly for rendering the kickstarted tables. Disadvantage
+of this method, is that database must get dynamically adopted when new fields get added. For two different properties
+there can't be a configuration-value which has different types (i.e. integer and varchar).
+
+When XML/Flexforms is used there must be a step in between where XML is converted to an array, and overlaid over the
+data from the property-row.
+
+As searching is not that important the advantages of Flexforms for properties seem to win this case.
+
+

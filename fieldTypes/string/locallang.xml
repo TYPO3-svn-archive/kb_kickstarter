@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Property labels for kb_kickstart propery "string"</description>
+		<type>database</type>
+		<csh_table></csh_table>
+		<fileId>EXT:kb_kickstarter/fieldTypes/string/locallang.xml</fileId>
+		<labelContext type="array">
+			<label index="property_name"></label>
+			<label index="field.size"></label>
+			<label index="field.max"></label>
+			<label index="field.default"></label>
+			<label index="field.eval"></label>
+			<label index="field.is_in"></label>
+			<label index="field.wizard"></label>
+		</labelContext>
+		<ext_filename_template>EXT:csh_###LANGKEY###/kb_kickstarter/fieldTypes/string/###LANGKEY###.locallang.xml</ext_filename_template>
+		<keep_original_text type="integer">1</keep_original_text>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="property_name">String</label>
+			<label index="field.size">Field length</label>
+			<label index="field.max">Maximal characters</label>
+			<label index="field.default">Default value</label>
+			<label index="field.eval">Evaluation</label>
+			<label index="field.is_in">Allowed characters</label>
+			<label index="field.wizard">Wizard</label>
+		</languageKey>
+	</data>
+</T3locallang>

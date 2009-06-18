@@ -1,0 +1,19 @@
+
+*** change in class.tslib_content.php : In method getData the access for "field" getData-Type was changed
+    to use ->getGlobal instead of direct array access
+
+
+
+* Check: "Required" is not added to the eval statement ???
+
+* Probably there should be an option for a fieldType "string" which allows the admin to select which
+  database field-type is created. Currently always an MEDIUMTEXT field is created allowing 2^24 bytes 
+  of text data (~16 MB Text) - it could be possible that less or more is required.
+
+* Currently the field type for a relation field (either database relation or file) is of type "TEXT"
+  which allows to store the name/number of relations or files up to a length of 2^16 bytes (64 KB)
+  Usually only a few files will get stored, and a varchar field could also be ok. probably allow the
+  admin to select if an varchar(200) field should get created. Or probably do this automatically when
+  only one file/database-relation is allowed for the field (if max_items=1)
+
+

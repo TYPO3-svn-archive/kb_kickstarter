@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable type="integer">1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.basic</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<prop_default type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/time/locallang.xml:field.prop_default</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>time</eval>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</prop_default>
+				</el>
+			</ROOT>
+		</sDEF>
+		<sheet_language>EXT:kb_kickstarter/fieldTypes/_basics/sheet_language.xml</sheet_language>
+	</sheets>
+</T3DataStructure>

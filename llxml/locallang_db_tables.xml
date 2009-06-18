@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Table labels for kb_kickstarter table "Tables"</description>
+		<type>database</type>
+		<csh_table></csh_table>
+		<fileId>EXT:kb_kickstarter/llxml/locallang_db_tables.xml</fileId>
+		<labelContext type="array">
+			<label index="tx_kbkickstarter_tables"></label>
+		</labelContext>
+		<ext_filename_template>EXT:csh_###LANGKEY###/kb_kickstarter/###LANGKEY###.locallang_db_tables.xml</ext_filename_template>
+		<keep_original_text type="integer">1</keep_original_text>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_kbkickstarter_tables">Kickstarter: Table</label>
+			<label index="tx_kbkickstarter_tables.name">Table name (default language)</label>
+			<label index="tx_kbkickstarter_tables.alias">Table alias (database name)</label>
+			<label index="tx_kbkickstarter_tables.no_prefix">No prefix</label>
+			<label index="tx_kbkickstarter_tables.hasFields">Fields</label>
+			<label index="tx_kbkickstarter_tables.labelFields">Label fields</label>
+			<label index="tx_kbkickstarter_tables.sortFields">Sorting fields</label>
+			<label index="tx_kbkickstarter_tables.standardPages">Allow table on standard pages</label>
+			<label index="tx_kbkickstarter_tables.icon_default">Table icon (default)</label>
+			<label index="tx_kbkickstarter_tables.enableHide">Enablde Visibility (hidden)</label>
+			<label index="tx_kbkickstarter_tables.enableStartStop">Enablde Time-Control (starttime/endtime)</label>
+			<label index="tx_kbkickstarter_tables.enableAccessControl">Enable Access-Control</label>
+			<label index="tx_kbkickstarter_tables.datetimeStartStop">Start/Stop as DateTime</label>
+			<label index="tx_kbkickstarter_tables.ownerField">FE-User owner field</label>
+			<label index="tx_kbkickstarter_tables.ownerField.none">None</label>
+		</languageKey>
+	</data>
+</T3locallang>

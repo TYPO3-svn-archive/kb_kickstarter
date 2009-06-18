@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable type="integer">1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.basic</sheetTitle>
+				</TCEforms>
+			</ROOT>
+		</sDEF>
+	</sheets>
+</T3DataStructure>

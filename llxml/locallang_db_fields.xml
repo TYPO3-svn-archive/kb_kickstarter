@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Table labels for kb_kickstarter table "Fields"</description>
+		<type>database</type>
+		<csh_table></csh_table>
+		<fileId>EXT:kb_kickstarter/llxml/locallang_db_fields.xml</fileId>
+		<labelContext type="array">
+			<label index="tx_kbkickstarter_fields"></label>
+			<label index="tx_kbkickstarter_fields.name"></label>
+			<label index="tx_kbkickstarter_fields.alias"></label>
+			<label index="tx_kbkickstarter_fields.type"></label>
+			<label index="tx_kbkickstarter_fields.type.none"></label>
+			<label index="tx_kbkickstarter_fields.exclude_field"></label>
+			<label index="tx_kbkickstarter_fields.flexconfig"></label>
+			<label index="xml.sheet.basic"></label>
+			<label index="xml.sheet.advanced"></label>
+			<label index="xml.sheet.language"></label>
+			<label index="xml.prop_l10n_mode"></label>
+			<label index="xml.prop_l10n_mode.exclude"></label>
+			<label index="xml.prop_l10n_mode.mergeIfNotBlank"></label>
+			<label index="xml.prop_l10n_mode.noCopy"></label>
+			<label index="xml.prop_l10n_mode.prefixLangTitle"></label>
+			<label index="xml.field_readOnly"></label>
+		</labelContext>
+		<ext_filename_template>EXT:csh_###LANGKEY###/kb_kickstarter/###LANGKEY###.locallang_db_fields.xml</ext_filename_template>
+		<keep_original_text type="integer">1</keep_original_text>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_kbkickstarter_fields">Kickstarter: Field</label>
+			<label index="tx_kbkickstarter_fields.name">Field name (default language)</label>
+			<label index="tx_kbkickstarter_fields.alias">Field alias (database name)</label>
+			<label index="tx_kbkickstarter_fields.type">Field type</label>
+			<label index="tx_kbkickstarter_fields.type.none">- None -</label>
+			<label index="tx_kbkickstarter_fields.exclude_field">Is exclude field</label>
+			<label index="tx_kbkickstarter_fields.flexconfig">Field configuration</label>
+			<label index="xml.sheet.basic">Basic settings</label>
+			<label index="xml.sheet.advanced">Advanced settings</label>
+			<label index="xml.sheet.language">Language settings</label>
+			<label index="xml.prop_l10n_mode">Translation mode</label>
+			<label index="xml.prop_l10n_mode.default">Copy value</label>
+			<label index="xml.prop_l10n_mode.exclude">Do not translate</label>
+			<label index="xml.prop_l10n_mode.mergeIfNotBlank">Use if not blank</label>
+			<label index="xml.prop_l10n_mode.noCopy">Use translated / not copied</label>
+			<label index="xml.prop_l10n_mode.prefixLangTitle">Use translated / prefixed</label>
+			<label index="xml.field_readOnly">Read only</label>
+		</languageKey>
+	</data>
+</T3locallang>

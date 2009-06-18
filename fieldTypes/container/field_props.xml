@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable type="integer">1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.basic</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<table type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.table</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<special>tables</special>
+								<show_thumbs>1</show_thumbs>
+							</config>
+						</TCEforms>
+					</table>
+					<parentPointer type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.parentPointer</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<itemsProcFunc>EXT:kb_kickstarter/class.tx_kbkickstarter_itemsProc.php:&amp;tx_kbkickstarter_itemsProc-&gt;tableFields</itemsProcFunc>
+								<foreignTableField>table</foreignTableField>
+							</config>
+						</TCEforms>
+					</parentPointer>
+					<maxitems type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.maxitems</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<default>0</default>
+								<checkbox>0</checkbox>
+							</config>
+						</TCEforms>
+					</maxitems>
+					<minitems type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.minitems</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<default>0</default>
+								<checkbox>0</checkbox>
+							</config>
+						</TCEforms>
+					</minitems>
+					<collapseAll type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.collapseAll</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</collapseAll>
+					<expandSingle type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.expandSingle</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</expandSingle>
+					<addTitle type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.addTitle</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</addTitle>
+					<linkPosition type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.linkPosition</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.linkPosition.top</numIndex>
+										<numIndex index="1">top</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.linkPosition.bottom</numIndex>
+										<numIndex index="1">bottom</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.linkPosition.both</numIndex>
+										<numIndex index="1">both</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.linkPosition.none</numIndex>
+										<numIndex index="1">none</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</linkPosition>
+					<useSortable type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.useSortable</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</useSortable>
+				</el>
+			</ROOT>
+		</sDEF>
+		<sheet_language>EXT:kb_kickstarter/fieldTypes/_basics/sheet_language.xml</sheet_language>
+	</sheets>
+</T3DataStructure>

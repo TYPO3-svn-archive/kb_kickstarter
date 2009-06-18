@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable type="integer">1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.basic</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<size type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/string/locallang.xml:field.size</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<range>
+									<upper>200</upper>
+									<lower>0</lower>
+								</range>
+								<default>30</default>
+							</config>
+						</TCEforms>
+					</size>
+					<max type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/string/locallang.xml:field.max</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<range>
+									<upper>200</upper>
+									<lower>0</lower>
+								</range>
+								<default>200</default>
+							</config>
+						</TCEforms>
+					</max>
+					<default type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/string/locallang.xml:field.default</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+							</config>
+						</TCEforms>
+					</default>
+				</el>
+			</ROOT>
+		</sDEF>
+		<sheet_advanced>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.advanced</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<eval type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/string/locallang.xml:field.eval</label>
+							<config>
+								<type>select</type>
+								<size>8</size>
+								<maxitems>20</maxitems>
+								<minitems>0</minitems>
+								<items>
+									<!-- TODO: Add LLL labels for various eval-types -->
+									<numIndex index="0" type="array">
+										<numIndex index="0">trim</numIndex>
+										<numIndex index="1">trim</numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">required</numIndex>
+										<numIndex index="1">required</numIndex>
+									</numIndex>
+									<numIndex index="2" type="array">
+										<numIndex index="0">upper</numIndex>
+										<numIndex index="1">upper</numIndex>
+									</numIndex>
+									<numIndex index="3" type="array">
+										<numIndex index="0">lower</numIndex>
+										<numIndex index="1">lower</numIndex>
+									</numIndex>
+									<numIndex index="4" type="array">
+										<numIndex index="0">alpha</numIndex>
+										<numIndex index="1">alpha</numIndex>
+									</numIndex>
+									<numIndex index="5" type="array">
+										<numIndex index="0">num</numIndex>
+										<numIndex index="1">num</numIndex>
+									</numIndex>
+									<numIndex index="6" type="array">
+										<numIndex index="0">alphanum</numIndex>
+										<numIndex index="1">alphanum</numIndex>
+									</numIndex>
+									<numIndex index="7" type="array">
+										<numIndex index="0">alphanum_x</numIndex>
+										<numIndex index="1">alphanum_x</numIndex>
+									</numIndex>
+									<numIndex index="8" type="array">
+										<numIndex index="0">nospace</numIndex>
+										<numIndex index="1">nospace</numIndex>
+									</numIndex>
+									<numIndex index="9" type="array">
+										<numIndex index="0">md5</numIndex>
+										<numIndex index="1">md5</numIndex>
+									</numIndex>
+									<numIndex index="10" type="array">
+										<numIndex index="0">is_in</numIndex>
+										<numIndex index="1">is_in</numIndex>
+									</numIndex>
+									<numIndex index="11" type="array">
+										<numIndex index="0">password</numIndex>
+										<numIndex index="1">password</numIndex>
+									</numIndex>
+									<numIndex index="12" type="array">
+										<numIndex index="0">unique</numIndex>
+										<numIndex index="1">unique</numIndex>
+									</numIndex>
+									<numIndex index="13" type="array">
+										<numIndex index="0">uniqueInPid</numIndex>
+										<numIndex index="1">uniqueInPid</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</eval>
+					<wizard>
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/string/locallang.xml:field.wizard</label>
+							<config>
+								<type>select</type>
+								<size>1</size>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0">None</numIndex>
+										<numIndex index="1"></numIndex>
+									</numIndex>
+									<numIndex index="1" type="array">
+										<numIndex index="0">Link</numIndex>
+										<numIndex index="1">link</numIndex>
+									</numIndex>
+								</items>
+							</config>
+						</TCEforms>
+					</wizard>
+					<readOnly type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.field_readOnly</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</readOnly>
+				</el>
+			</ROOT>
+		</sheet_advanced>
+		<sheet_language>EXT:kb_kickstarter/fieldTypes/_basics/sheet_language.xml</sheet_language>
+	</sheets>
+</T3DataStructure>
