@@ -28,6 +28,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'php' => '5.1.0-',
 			'cms' => '',
 			'smarty' => '1.4.0-',
+			'kb_config' => '0.1.0-',
 		),
 		'conflicts' => array(
 		),
