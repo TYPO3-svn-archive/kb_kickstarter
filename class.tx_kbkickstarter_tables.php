@@ -125,15 +125,20 @@ class tx_kbkickstarter_tables {
 			$fieldRows[] = $row;
 		}
 		$GLOBALS['TYPO3_DB']->sql_free_result($res);
+		$validRows = array();
 		foreach ($fieldRows as $fieldIdx => $fieldRow) {
 			list($type, $subtype) = explode('|', $fieldRow['type']);
+			if ($type==='none') {
+				continue;
+			}
 /*
 			if ($type=='container') {
 				die('Type "Container" not handled yet !');
 			}
 */
+			$validRows[] = $fieldRow;
 		}
-		return $fieldRows;
+		return $validRows;
 	}
 
 	/**

@@ -1,0 +1,6 @@
+
+2009-08-27  Bernhard Kraft  <kraftb@think-open.at>
+
+	* Created this file
+	* Fixed Bug #4144: Bad error message on undefined fieldtype
+
