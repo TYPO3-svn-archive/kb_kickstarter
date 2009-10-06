@@ -40,6 +40,9 @@
 {if $property.config.multiple}
 				'multiple' => true,
 {/if}
+{if $property.config.itemsProcFunc}
+				'itemsProcFunc' => '{$property.config.itemsProcFunc}',
+{/if}
 {if $property.config.extraElements}
 				'items' => array(
 {foreach from=$property.config.extraElements item=extraElement}

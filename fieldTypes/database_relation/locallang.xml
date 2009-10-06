@@ -21,6 +21,9 @@
 			<label index="field.fieldSorting.ASC"></label>
 			<label index="field.fieldSorting.DESC"></label>
 			<label index="field.readOnly"></label>
+			<label index="field.styleSelected"></label>
+			<label index="field.styleAvailable"></label>
+			<label index="field.itemsProcFunc"></label>
 			<label index="field__relationType"></label>
 			<label index="field__relationType_group"></label>
 			<label index="field__relationType_select"></label>
@@ -50,6 +53,7 @@
 			<label index="field.readOnly">Read-only</label>
 			<label index="field.styleSelected">Style: Selected Box</label>
 			<label index="field.styleAvailable">Style: Available Box</label>
+			<label index="field.itemsProcFunc">Item processing function</label>
 			<label index="field__relationType">Type of relation field</label>
 			<label index="field__relationType_group">Group field</label>
 			<label index="field__relationType_select">Select-Box</label>

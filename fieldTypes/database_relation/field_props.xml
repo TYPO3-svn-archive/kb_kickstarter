@@ -232,6 +232,14 @@
 							</config>
 						</TCEforms>
 					</styleAvailable>
+					<itemsProcFunc type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/database_relation/locallang.xml:field.itemsProcFunc</label>
+							<config>
+								<type>input</type>
+							</config>
+						</TCEforms>
+					</itemsProcFunc>
 				</el>
 			</ROOT>
 		</sheet_advanced>
