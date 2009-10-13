@@ -79,8 +79,8 @@ $TCA['{$table.full_alias}'] = Array(
 		'fe_cruser_id' => '{$table.ownerFieldRecord.full_alias}',
 {/if}
 		'dynamicConfigFile' => t3lib_extMgm::extPath('{$configExtension}').'{$table._TCA.relFile}',
-{if $table._iconFile}
-		'iconfile' => '{$table._iconFile}',
+{if $table.icon_default}
+		'iconfile' => '../uploads/tx_kbkickstarter/{$table.icon_default}',
 {else}
 		'iconfile' => RELPATH_kb_kickstarter.'icons/icon_unknown.png',
 {/if}
