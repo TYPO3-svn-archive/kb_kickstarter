@@ -39,6 +39,7 @@ class tx_kbkickstarter_config {
 	private $table_FIELDS = 'tx_kbkickstarter_fields';
 	private $table_FIELDS_IN_TABLES = 'tx_kbkickstarter_tables_fields_mm';
 	private $table_LABELS_OF_TABLES = 'tx_kbkickstarter_tables_labelFields_mm';
+	private $table_SORTING_OF_TABLES = 'tx_kbkickstarter_tables_sortFields_mm';
 
 	// The name of this extension
 	private $extension;
@@ -222,6 +223,15 @@ class tx_kbkickstarter_config {
 	 */
 	public function getTable_LABELS_OF_TABLES() {
 		return $this->table_LABELS_OF_TABLES;
+	}
+
+	/**
+	 * Returns the name of the table which stores information about sorting fields for each tables (MM table)
+	 *
+	 * @return	string		The table used for storing field/table relations
+	 */
+	public function getTable_SORTING_OF_TABLES() {
+		return $this->table_SORTING_OF_TABLES;
 	}
 
 	/**

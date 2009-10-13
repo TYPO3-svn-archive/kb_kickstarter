@@ -90,11 +90,13 @@ class tx_kbkickstarter_tables {
 		$fields_table = $this->configObj->getTable_FIELDS();
 		$mm_table_fields = $this->configObj->getTable_FIELDS_IN_TABLES();
 		$mm_table_labels = $this->configObj->getTable_LABELS_OF_TABLES();
+		$mm_table_sorting = $this->configObj->getTable_SORTING_OF_TABLES();
 		$tables_whereClause = t3lib_BEfunc::deleteClause($tables_table);
 		$tableRows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', $tables_table, '1=1 '.$tables_whereClause, '', 'uid', '', 'uid');
 		foreach ($tableRows as $tableIdx => $tableRow)	{
 			$tableRows[$tableIdx]['fieldRows'] = $this->loadFields($mm_table_fields, intval($tableRow['uid']));
 			$tableRows[$tableIdx]['labelFields'] = $this->loadFields($mm_table_labels, intval($tableRow['uid']));
+			$tableRows[$tableIdx]['sortFields'] = $this->loadFields($mm_table_sorting, intval($tableRow['uid']));
 			if ($tableRow['ownerField']) {
 				$tableRows[$tableIdx]['ownerFieldRecord'] = t3lib_BEfunc::getRecord($fields_table, $tableRow['ownerField']);
 			}
@@ -116,27 +118,39 @@ class tx_kbkickstarter_tables {
 	 * @return	array		An array containing all field definitions
 	 */
 	private function loadFields($mm_table, $uid) {
+		$validRows = array();
 		$tables_table = $this->configObj->getTable_TABLES();
 		$fields_table = $this->configObj->getTable_FIELDS();
 		$fields_whereClause = t3lib_BEfunc::deleteClause($fields_table);
-		$res = $GLOBALS['TYPO3_DB']->exec_SELECT_mm_query($fields_table.'.*', $tables_table, $mm_table, $fields_table, ' AND '.$tables_table.'.uid='.$uid.' '.$fields_whereClause, '', $mm_table.'.sorting');
-		$fieldRows = array();
-		while ($row = $GLOBALS['TYPO3_DB']->sql_fetch_assoc($res)) {
-			$fieldRows[] = $row;
+		$mm_rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', $mm_table, 'uid_local='.$uid);
+		$foreign_uids = array();
+		foreach ($mm_rows as $mm_row) {
+			$foreign_uids[] = abs($mm_row['uid_foreign']);
 		}
-		$GLOBALS['TYPO3_DB']->sql_free_result($res);
-		$validRows = array();
-		foreach ($fieldRows as $fieldIdx => $fieldRow) {
-			list($type, $subtype) = explode('|', $fieldRow['type']);
-			if ($type==='none') {
-				continue;
+		$foreign_str = implode(',', $foreign_uids);
+		if ($foreign_str) {
+			$tmp_fieldRows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', $fields_table, 'uid IN ('.$foreign_str.')'.$fields_whereClause, '', '', '', 'uid');
+			$fieldRows = array();
+			foreach ($mm_rows as $mm_row) {
+				$abs_uid = abs($mm_row['uid_foreign']);
+				$tmp_row = $tmp_fieldRows[$abs_uid];
+				if ($mm_row['uid_foreign'] < 0) {
+					$tmp_row['__negate'] = true;
+				}
+				$fieldRows[] = $tmp_row;
 			}
+			foreach ($fieldRows as $fieldIdx => $fieldRow) {
+				list($type, $subtype) = explode('|', $fieldRow['type']);
+				if ($type==='none') {
+					continue;
+				}
 /*
-			if ($type=='container') {
-				die('Type "Container" not handled yet !');
-			}
+				if ($type=='container') {
+					die('Type "Container" not handled yet !');
+				}
 */
-			$validRows[] = $fieldRow;
+				$validRows[] = $fieldRow;
+			}
 		}
 		return $validRows;
 	}
@@ -185,6 +199,7 @@ class tx_kbkickstarter_tables {
 */
 		$table = $this->table_saneConfig_fields($table, 'fieldRows', $noFieldPrefix);
 		$table = $this->table_saneConfig_fields($table, 'labelFields', $noFieldPrefix);
+		$table = $this->table_saneConfig_fields($table, 'sortFields', $noFieldPrefix);
 		if ($table['ownerField']) {
 			$table['ownerFieldRecord'] = $this->table_saneConfig_field($table['ownerFieldRecord'], $table, $noFieldPrefix);
 		}
@@ -203,6 +218,18 @@ class tx_kbkickstarter_tables {
 				}
 			}
 			$table['_altLabels'] = implode(',', $altLabels);
+		}
+
+		$sortFields = array();
+		if (is_array($table['sortFields'])) {
+			foreach ($table['sortFields'] AS $sortField) {
+				$tmpSort = $sortField['full_alias'];
+				$tmpSort .= $sortField['__negate']?' DESC':' ASC';
+				$sortFields[] = $tmpSort;
+			}
+		}
+		if (count($sortFields)) {
+			$table['_sortFields'] = implode(', ', $sortFields);
 		}
 
 		$configKeys = $this->configObj->get_configFilesInfo();

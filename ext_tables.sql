@@ -81,7 +81,7 @@ CREATE TABLE tx_kbkickstarter_tables_labelFields_mm (
 
 CREATE TABLE tx_kbkickstarter_tables_sortFields_mm (
   `uid_local` int(11) unsigned DEFAULT '0' NOT NULL,
-  `uid_foreign` int(11) unsigned DEFAULT '0' NOT NULL,
+  `uid_foreign` int(11) DEFAULT '0' NOT NULL,
   `tablenames` varchar(30) DEFAULT '' NOT NULL,
   `sorting` int(11) unsigned DEFAULT '0' NOT NULL,
   KEY uid_local (uid_local),
