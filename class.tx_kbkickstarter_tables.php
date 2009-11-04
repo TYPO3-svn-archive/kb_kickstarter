@@ -122,7 +122,7 @@ class tx_kbkickstarter_tables {
 		$tables_table = $this->configObj->getTable_TABLES();
 		$fields_table = $this->configObj->getTable_FIELDS();
 		$fields_whereClause = t3lib_BEfunc::deleteClause($fields_table);
-		$mm_rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', $mm_table, 'uid_local='.$uid);
+		$mm_rows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', $mm_table, 'uid_local='.$uid, '', 'sorting');
 		$foreign_uids = array();
 		foreach ($mm_rows as $mm_row) {
 			$foreign_uids[] = abs($mm_row['uid_foreign']);
