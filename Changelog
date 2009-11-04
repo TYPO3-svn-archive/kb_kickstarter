@@ -1,3 +1,7 @@
+2009-10-05  Bernhard Kraft  <kraftb@think-open.at>
+
+	* Fixed Bug: Installation order of kb_config and kb_kickstarter does now not matter anymore
+	  Before kb_kickstarter had to be installed before kb_config
 
 2009-08-27  Bernhard Kraft  <kraftb@think-open.at>
 
