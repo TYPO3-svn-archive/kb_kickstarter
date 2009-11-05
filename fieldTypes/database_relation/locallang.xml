@@ -41,6 +41,7 @@
 			<label index="field.autoSizeMax">Maximal selector height</label>
 			<label index="field.allowed">Allowed tables</label>
 			<label index="field.pages">Records on pages</label>
+			<label index="field.same_page">Records on same page</label>
 			<label index="field.maxitems">Maximal items</label>
 			<label index="field.minitems">Minimal items</label>
 			<label index="field.multiple">Allow same items more than once</label>

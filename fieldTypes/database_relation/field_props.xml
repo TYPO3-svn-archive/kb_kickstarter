@@ -83,6 +83,14 @@
 							</config>
 						</TCEforms>
 					</pages>
+					<same_page type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/database_relation/locallang.xml:field.same_page</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</same_page>
 					<maxitems type="array">
 						<TCEforms>
 							<label>LLL:EXT:kb_kickstarter/fieldTypes/database_relation/locallang.xml:field.maxitems</label>

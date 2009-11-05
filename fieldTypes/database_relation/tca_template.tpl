@@ -8,8 +8,8 @@
 {else}
 				'type' => 'select',
 				'foreign_table' => '{$property.config.allowed}',
-{if ($property.config.pages|regex_replace:"/[^0-9,]/":"") || $property.config.fieldMatching || $property.config.fieldSorting}
-				'foreign_table_where' => '{if ($property.config.pages|regex_replace:"/[^0-9,]/":"")} AND {$property.config.allowed}.pid IN ({$property.config.pages|regex_replace:"/[^0-9,]/":""}){/if}{if $property.config.fieldMatching} AND ###REC_FIELD_uid###={$property.config.allowed}.{$property.config.fieldMatching}{/if}{if $property.config.fieldSorting} ORDER BY {$property.config.fieldSorting}{/if}',
+{if ($property.config.same_page) || ($property.config.pages|regex_replace:"/[^0-9,]/":"") || $property.config.fieldMatching || $property.config.fieldSorting}
+				'foreign_table_where' => '{if $property.config.same_page} AND ###REC_FIELD_pid###={$property.config.allowed}.pid{/if}{if ($property.config.pages|regex_replace:"/[^0-9,]/":"")} AND {$property.config.allowed}.pid IN ({$property.config.pages|regex_replace:"/[^0-9,]/":""}){/if}{if $property.config.fieldMatching} AND ###REC_FIELD_uid###={$property.config.allowed}.{$property.config.fieldMatching}{/if}{if $property.config.fieldSorting} ORDER BY {$property.config.fieldSorting}{/if}',
 {/if}
 {/if}
 				'size' => '{$property.config.size}',
