@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable type="integer">1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.basic</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<rte_config type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/text/locallang.xml:field.rte_config</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>trim</eval>
+								<default>richtext[cut|copy|paste|formatblock|textcolor|bold|italic|underline|left|center|right|orderedlist|unorderedlist|outdent|indent|link|table|image|line|chMode]:rte_transform[mode=ts_css|imgpath=###UPLOAD_PATH###]
+								</default>
+							</config>
+						</TCEforms>
+					</rte_config>
+					<cols type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/text/locallang.xml:field.cols</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<range>
+									<upper>48</upper>
+									<lower>1</lower>
+								</range>
+								<default>30</default>
+							</config>
+						</TCEforms>
+					</cols>
+					<rows type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/text/locallang.xml:field.rows</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<range>
+									<upper>20</upper>
+									<lower>1</lower>
+								</range>
+								<default>5</default>
+							</config>
+						</TCEforms>
+					</rows>
+					<default type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/text/locallang.xml:field.default</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+							</config>
+						</TCEforms>
+					</default>
+					<nowrap type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/text/locallang.xml:field.nowrap</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</nowrap>
+					<readOnly type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.field_readOnly</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</readOnly>
+				</el>
+			</ROOT>
+		</sDEF>
+		<sheet_language>EXT:kb_kickstarter/fieldTypes/_basics/sheet_language.xml</sheet_language>
+	</sheets>
+</T3DataStructure>

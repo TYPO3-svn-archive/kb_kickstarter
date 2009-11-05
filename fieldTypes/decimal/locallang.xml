@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3locallang>
 	<meta type="array">
-		<description>Property labels for kb_kickstart propery "decimal"</description>
+		<description>Property labels for kb_kickstart property "decimal"</description>
 		<type>database</type>
 		<csh_table></csh_table>
 		<fileId>EXT:kb_kickstarter/fieldTypes/decimal/locallang.xml</fileId>

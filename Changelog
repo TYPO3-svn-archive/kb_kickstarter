@@ -1,13 +1,9 @@
 2009-10-05  Bernhard Kraft  <kraftb@think-open.at>
 
+	* Implemented feature: Field type "RTE"
+	* Fixed typo: Every field type localang.xml had the word "property" misspelled	
 	* Added feature: It is now possible, to define a "where" part for database relations, so only items on the current page can be selected
-
-2009-10-05  Bernhard Kraft  <kraftb@think-open.at>
-
 	* Fixed Bug: Sorting of fields in created record did not respect sorting in table record field list
-
-2009-10-05  Bernhard Kraft  <kraftb@think-open.at>
-
 	* Fixed Bug: Installation order of kb_config and kb_kickstarter does now not matter anymore
 	  Before kb_kickstarter had to be installed before kb_config
 

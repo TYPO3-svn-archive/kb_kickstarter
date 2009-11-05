@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <T3locallang>
 	<meta type="array">
-		<description>Property labels for kb_kickstart propery "database_relation"</description>
+		<description>Property labels for kb_kickstart property "database_relation"</description>
 		<type>database</type>
 		<csh_table></csh_table>
 		<fileId>EXT:kb_kickstarter/fieldTypes/database_relation/locallang.xml</fileId>
