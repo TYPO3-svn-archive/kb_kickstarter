@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<kb_kickstarter>
+	<propertyName>LLL:EXT:kb_kickstarter/fieldTypes/tab/locallang.xml:property_name</propertyName>
+	<propertyValue>tab</propertyValue>
+	<propertyIcon>EXT:kb_kickstarter/fieldTypes/tab/prop_icon.png</propertyIcon>
+</kb_kickstarter>

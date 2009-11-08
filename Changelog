@@ -1,4 +1,8 @@
-2009-10-05  Bernhard Kraft  <kraftb@think-open.at>
+2009-11-08  Bernhard Kraft  <kraftb@think-open.at>
+
+	* Implemented feature: Field Type "Tab" to allow separation of fields into Tabs of alt_doc
+
+2009-11-05  Bernhard Kraft  <kraftb@think-open.at>
 
 	* Implemented feature: Field type "RTE"
 	* Fixed typo: Every field type localang.xml had the word "property" misspelled	

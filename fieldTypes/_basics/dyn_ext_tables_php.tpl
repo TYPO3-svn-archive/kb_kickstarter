@@ -16,7 +16,6 @@
 
 // TODO:[prependAtCopy]=LLL:EXT:lang/locallang_general.xml:LGL.prependAtCopy
 
-// TODO:[dividers2tabs]=1
 
 // TODO: [copyAfterDuplFields]=colPos,sys_language_uid
 // TODO: [useColumnsForDefaultValues]=colPos,sys_language_uid
@@ -40,6 +39,7 @@ $TCA['{$table.full_alias}'] = Array(
 	'ctrl' => Array (
 		'title' => 'LLL:EXT:{$configExtension}/llxml/locallang_{$table.alias}_db.xml:{$table.alias}',
 		'label' => '{$table._labelField}',
+		'dividers2tabs' => 1,
 {if $table._altLabels}
 		'label_alt' => '{$table._altLabels}',
 		'label_alt_force' => 1,

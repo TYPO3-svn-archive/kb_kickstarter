@@ -4,7 +4,11 @@ hidden,
 {/if}
 {foreach from=$table.fieldRows key=property_key item=property name=types_Iter}
 	{if (!$smarty.foreach.types_Iter.first) || $table.enableHide}, {/if}
-	{$property.full_alias}
+	{if "tab" == $property.type}
+		--div--;{include file="_basics/ll_label.tpl"}
+	{else}
+		{$property.full_alias}
+	{/if}
 {/foreach}
 {if $table.enableStartStop}
 	, starttime;;;;98-98-98, endtime
