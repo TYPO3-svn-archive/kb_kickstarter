@@ -1,6 +1,10 @@
+2009-11-23  Bernhard Kraft  <kraftb@think-open.at>
+
+	* Implemented feature: Field type "Dropdown" implementing the select box field type
+
 2009-11-08  Bernhard Kraft  <kraftb@think-open.at>
 
-	* Implemented feature: Field Type "Tab" to allow separation of fields into Tabs of alt_doc
+	* Implemented feature: Field type "Tab" to allow separation of fields into tabs of alt_doc
 
 2009-11-05  Bernhard Kraft  <kraftb@think-open.at>
 

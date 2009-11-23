@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Property labels for kb_kickstarter property "dropdown"</description>
+		<type>database</type>
+		<csh_table></csh_table>
+		<fileId>EXT:kb_kickstarter/fieldTypes/dropdown/locallang.xml</fileId>
+		<labelContext type="array">
+			<label index="property_name"></label>
+			<label index="field.maxitems"></label>
+			<label index="field.minitems"></label>
+			<label index="field.size"></label>
+			<label index="field.autoSizeMax"></label>
+			<label index="field.multiple"></label>
+			<label index="field.readOnly"></label>
+			<label index="field.styleSelected"></label>
+			<label index="field.styleAvailable"></label>
+			<label index="field.itemsProcFunc"></label>
+			<label index="field.renderMode"></label>
+			<label index="field.renderMode.default"></label>
+			<label index="field.renderMode.checkbox"></label>
+			<label index="field.renderMode.singlebox"></label>
+			<label index="field.selectElement"></label>
+			<label index="field.selectElement.label"></label>
+			<label index="field.selectElement.value"></label>
+			<label index="field.selectElement.icon"></label>
+			<label index="field.iconsInOptionTags"></label>
+			<label index="field.iconMode"></label>
+			<label index="field.iconMode.default"></label>
+			<label index="field.iconMode.suppress"></label>
+			<label index="field.iconMode.selected"></label>
+			<label index="field.iconMode.current"></label>
+		</labelContext>
+		<ext_filename_template>EXT:csh_###LANGKEY###/kb_kickstarter/fieldTypes/dropdown/###LANGKEY###.locallang.xml</ext_filename_template>
+		<keep_original_text type="integer">1</keep_original_text>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="property_name">Drop-Down box</label>
+			<label index="field.maxitems">Maximal items</label>
+			<label index="field.minitems">Minimal items</label>
+			<label index="field.size">Selector height</label>
+			<label index="field.autoSizeMax">Maximal selector height</label>
+			<label index="field.multiple">Allow same items more than once</label>
+			<label index="field.readOnly">Read-only</label>
+			<label index="field.styleSelected">Style: Selected box</label>
+			<label index="field.styleAvailable">Style: Available box</label>
+			<label index="field.itemsProcFunc">Item processing function</label>
+			<label index="field.renderMode">Render mode</label>
+			<label index="field.renderMode.checkbox">Checkbox</label>
+			<label index="field.renderMode.singlebox">Single box</label>
+			<label index="field.selectElement">Box element</label>
+			<label index="field.selectElement.label">Label</label>
+			<label index="field.selectElement.value">Value</label>
+			<label index="field.selectElement.icon">Icon</label>
+			<label index="field.iconsInOptionTags">Icons in option tags</label>
+			<label index="field.iconMode">Icon mode</label>
+			<label index="field.iconMode.default">Default</label>
+			<label index="field.iconMode.suppress">Suppress</label>
+			<label index="field.iconMode.selected">Only show when value selected</label>
+			<label index="field.iconMode.current">Only show current icon</label>
+		</languageKey>
+	</data>
+</T3locallang>
