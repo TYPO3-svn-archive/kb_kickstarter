@@ -1,3 +1,7 @@
+2009-11-24  Bernhard Kraft  <kraftb@think-open.at>
+
+	* Preliminary implemented feature: Setting crdate/tstamp as BE sort field for table (Commented out currently)
+
 2009-11-23  Bernhard Kraft  <kraftb@think-open.at>
 
 	* Implemented feature: Field type "Dropdown" implementing the select box field type

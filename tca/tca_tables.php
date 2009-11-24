@@ -104,6 +104,14 @@ $TCA['tx_kbkickstarter_tables'] = Array (
 				'neg_foreign_table_where' => ' AND tx_kbkickstarter_fields.hidden=0',
 				'foreign_table_prefix' => 'ASC: ',
 				'neg_foreign_table_prefix' => 'DESC: ',
+/*
+				'items' => array(
+					array('LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.sortFields.crdate_asc', 'crdate_ASC'),
+					array('LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.sortFields.crdate_desc', 'crdate_DESC'),
+					array('LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.sortFields.tstamp_asc', 'tstamp_ASC'),
+					array('LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.sortFields.tstamp_desc', 'tstamp_DESC'),
+				),
+*/
 				'itemsProcFunc' => 'EXT:kb_kickstarter/class.tx_kbkickstarter_itemsProc.php:&tx_kbkickstarter_itemsProc->removeNonSelected',
 				'itemsProcFuncParams' => Array(
 					'field' => 'hasFields',

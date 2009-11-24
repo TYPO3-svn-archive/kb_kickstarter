@@ -20,6 +20,10 @@
 			<label index="tx_kbkickstarter_tables.hasFields">Fields</label>
 			<label index="tx_kbkickstarter_tables.labelFields">Label fields</label>
 			<label index="tx_kbkickstarter_tables.sortFields">Sorting fields</label>
+			<label index="tx_kbkickstarter_tables.sortFields.crdate_asc">ASC: Creation date</label>
+			<label index="tx_kbkickstarter_tables.sortFields.crdate_desc">DESC: Creation date</label>
+			<label index="tx_kbkickstarter_tables.sortFields.tstamp_asc">ASC: Last modification</label>
+			<label index="tx_kbkickstarter_tables.sortFields.tstamp_desc">DESC: Last modification</label>
 			<label index="tx_kbkickstarter_tables.standardPages">Allow table on standard pages</label>
 			<label index="tx_kbkickstarter_tables.icon_default">Table icon (default)</label>
 			<label index="tx_kbkickstarter_tables.enableHide">Enablde Visibility (hidden)</label>
