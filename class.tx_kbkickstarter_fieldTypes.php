@@ -94,7 +94,8 @@ class tx_kbkickstarter_fieldTypes {
 				$fieldConfig = $config['kb_kickstarter'][0]['ch'];
 				list($configName, $configArray) = $this->getConfigItem($fieldConfig);
 				if ($configName && is_array($configArray)) {
-					if ((count($configArray)==2) || (count($configArray)==3)) {
+					if ($configName === '__unavailable') {
+					} elseif ((count($configArray)==2) || (count($configArray)==3)) {
 						$flexXMLpath = 'FILE:'.$basePath.$subdir.'/field_props.xml';
 						if ($configName!=='none') {
 							$GLOBALS['TYPO3_CONF_VARS']['EXT']['kb_kickstarter']['fieldTypes']['selectConfig'][$configName] = $configArray;
@@ -120,12 +121,95 @@ class tx_kbkickstarter_fieldTypes {
 	 * @return	array		The setup info as sane array
 	 */
 	private function getConfigItem($config) {
+		$key = $config['propertyValue'][0]['values'][0];
+		if (is_array($config['constraints']) && is_array($config['constraints'][0]) && is_array($constraints = $config['constraints'][0]['ch'])) {
+			if (is_array($constraints['depends']) && is_array($constraints['depends'][0]) && is_array($deps = $constraints['depends'][0]['ch'])) {
+				if (!$this->dependenciesOk($deps, 'depends')) {
+					$key = '__unavailable';
+				}
+			}
+		}
 		$item = array(
 			$config['propertyName'][0]['values'][0],
 			$config['propertyValue'][0]['values'][0],
 			$config['propertyIcon'][0]['values'][0],
 		);
-		return array($config['propertyValue'][0]['values'][0], $item);
+		return array($key, $item);
+	}
+
+
+	/**
+	 * Checks wheter specified dependencies are met
+	 *
+	 * @param	array		Dependencies to check
+	 * @param	string		Type of dependency (either "depends" or "conflicts")
+	 * @return	array		The setup info as sane array
+	 */
+	private function dependenciesOk($deps, $type) {
+		foreach ($deps as $extKey => $depConf) {
+			if (is_array($depConf) && is_array($depConf[0]) && is_array($depConf[0]['values']) && ($depString = $depConf[0]['values'][0])) {
+				if (t3lib_extMgm::isLoaded($extKey)) {
+					$versionRange = $this->splitVersionRange($depString);
+					$extVersion = $this->getVersion($extKey);
+					$compare_min = version_compare($extVersion, $versionRange[0]);
+					$compare_max = version_compare($versionRange[1], $extVersion);
+					if (!(($compare_min>=0) && (($compare_max>=0) || ($versionRange[1]==='0.0.0')))) {
+						return false;
+					}
+				} else {
+					return false;
+				}
+			}
+		}
+		return true;
+	}
+
+
+	 /**
+	 * Retrieves the version number of an extensions ext_emconf.php
+	 *
+	 * @param	string		The name of the extension (extension key)
+	 * @return	string		The version number of the extension
+	 */
+	function getVersion($extKey) {
+		$extConf = $GLOBALS['TYPO3_LOADED_EXT'][$extKey];
+		$extEmconf = PATH_site.$extConf['siteRelPath'].'ext_emconf.php';
+		if (file_exists($extEmconf)) {
+			include($extEmconf);
+		}
+		$version = '';
+		if (is_array($GLOBALS['EM_CONF']) && is_array($GLOBALS['EM_CONF'][$extKey])) {
+			$version = $GLOBALS['EM_CONF'][$extKey]['version'];
+		}
+		return $version;
+	}
+	
+
+	 /**
+	 * Splits a version range into an array.
+	 * Copied from: typo3/mod/tools/em/class.em_index.php
+	 *
+	 * If a single version number is given, it is considered a minimum value.
+	 * If a dash is found, the numbers left and right are considered as minimum and maximum. Empty values are allowed.
+	 *
+	 * @param	string		$ver A string with a version range.
+	 * @return	array
+	 */
+	function splitVersionRange($ver) {
+		$versionRange = array();
+		if (strstr($ver, '-')) {
+			$versionRange = explode('-', $ver, 2);
+		} else {
+			$versionRange[0] = $ver;
+			$versionRange[1] = '';
+		}
+		if (!$versionRange[0]) {
+			$versionRange[0] = '0.0.0';
+		}
+		if (!$versionRange[1]) {
+			$versionRange[1] = '0.0.0';
+		}
+		return $versionRange;
 	}
 
 

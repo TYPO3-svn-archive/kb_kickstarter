@@ -1,3 +1,8 @@
+2009-12-24  Bernhard Kraft  <kraftb@think-open.at>
+
+	* New feature for field-types "field_config.xml": Dependencies. This allows to require specific extension versions for fields being available.
+	* Added field type "DAM". Only available if DAM > 1.0.0 is installed. Thanks to Bernhard Stähli for this patch.
+
 2009-11-24  Bernhard Kraft  <kraftb@think-open.at>
 
 	* Preliminary implemented feature: Setting crdate/tstamp as BE sort field for table (Commented out currently)

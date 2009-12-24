@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<kb_kickstarter>
+	<propertyName>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:property_name</propertyName>
+	<propertyValue>dam</propertyValue>
+	<propertyIcon>EXT:kb_kickstarter/fieldTypes/dam/prop_icon.png</propertyIcon>
+	<constraints>
+		<depends>
+			<dam>1.0.0-</dam>
+		</depends>
+	</constraints>
+</kb_kickstarter>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+	<meta type="array">
+		<langDisable type="integer">1</langDisable>
+	</meta>
+	<sheets>
+		<sDEF>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.basic</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					<size type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.size</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<default>5</default>
+							</config>
+						</TCEforms>
+					</size>
+					<max_size type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.max_size</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<default>2000</default>
+							</config>
+						</TCEforms>
+					</max_size>
+					<autoSizeMax type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.autoSizeMax</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<checkbox>0</checkbox>
+								<default>0</default>
+							</config>
+						</TCEforms>
+					</autoSizeMax>
+					<maxitems type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.maxitems</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<default>0</default>
+								<checkbox>0</checkbox>
+							</config>
+						</TCEforms>
+					</maxitems>
+					<minitems type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.minitems</label>
+							<config>
+								<type>input</type>
+								<size>10</size>
+								<eval>int</eval>
+								<default>0</default>
+								<checkbox>0</checkbox>
+							</config>
+						</TCEforms>
+					</minitems>
+					<show_thumbs type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.show_thumbs</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</show_thumbs>
+				</el>
+			</ROOT>
+		</sDEF>
+		<sheet_advanced>
+			<ROOT>
+				<TCEforms>
+					<sheetTitle>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.sheet.advanced</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+<!-- dam is always MM
+					<useMM type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.useMM</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</useMM>
+-->
+					<allowed type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.allowed</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>nospace</eval>
+<!--								<eval>tx_kbkickstarter_evalList</eval>	-->
+								<default>*</default>
+							</config>
+						</TCEforms>
+					</allowed>
+					<disallowed type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/dam/locallang.xml:field.disallowed</label>
+							<config>
+								<type>input</type>
+								<size>30</size>
+								<eval>nospace</eval>
+<!--								<eval>tx_kbkickstarter_evalList</eval>	-->
+								<default>php,php3</default>
+							</config>
+						</TCEforms>
+					</disallowed>
+					<readOnly type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.field_readOnly</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</readOnly>
+				</el>
+			</ROOT>
+		</sheet_advanced>
+		<sheet_language>EXT:kb_kickstarter/fieldTypes/_basics/sheet_language.xml</sheet_language>
+	</sheets>
+</T3DataStructure>
