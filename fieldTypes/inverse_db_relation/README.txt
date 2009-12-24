@@ -1,5 +1,5 @@
 *
-* Field definition for kb_kickstarter Field-Type: "dam"
+* Field definition for kb_kickstarter Field-Type: "inverse_db_relation"
 *
 * Version 0.0.1 / 2009-12-21
 *

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<kb_kickstarter>
+	<propertyName>LLL:EXT:kb_kickstarter/fieldTypes/inverse_db_relation/locallang.xml:property_name</propertyName>
+	<propertyValue>inverse_db_relation</propertyValue>
+	<propertyIcon>EXT:kb_kickstarter/fieldTypes/inverse_db_relation/prop_icon.png</propertyIcon>
+</kb_kickstarter>

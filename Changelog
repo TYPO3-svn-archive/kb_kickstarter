@@ -1,5 +1,6 @@
 2009-12-24  Bernhard Kraft  <kraftb@think-open.at>
 
+	* Added field type "Inverse DB Relation". Thanks to Bernhard Stähli for this patch.
 	* New feature for field-types "field_config.xml": Dependencies. This allows to require specific extension versions for fields being available.
 	* Added field type "DAM". Only available if DAM > 1.0.0 is installed. Thanks to Bernhard Stähli for this patch.
 
