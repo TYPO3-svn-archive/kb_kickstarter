@@ -1,3 +1,7 @@
+2010-01-20  Bernhard Kraft  <kraftb@think-open.at>
+
+	* Added radiobuttons fieldType
+
 2009-12-24  Bernhard Kraft  <kraftb@think-open.at>
 
 	* Added field type "Inverse DB Relation". Thanks to Bernhard Stähli for this patch.

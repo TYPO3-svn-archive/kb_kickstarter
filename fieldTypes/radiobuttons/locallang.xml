@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Property labels for kb_kickstart property "radiobuttons"</description>
+		<type>database</type>
+		<csh_table></csh_table>
+		<fileId>EXT:kb_kickstarter/fieldTypes/radiobuttons/locallang.xml</fileId>
+		<labelContext type="array">
+			<label index="property_name"></label>
+			<label index="field.default"></label>
+		</labelContext>
+		<ext_filename_template>EXT:csh_###LANGKEY###/kb_kickstarter/fieldTypes/radiobuttons/###LANGKEY###.locallang.xml</ext_filename_template>
+		<keep_original_text type="integer">1</keep_original_text>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="property_name">Radiobuttons</label>
+			<label index="field.default">Default value</label>
+			<label index="field.radioElement">Radiobutton item</label>
+			<label index="field.radioElement.label">Label</label>
+			<label index="field.radioElement.value">Value</label>
+		</languageKey>
+	</data>
+</T3locallang>
