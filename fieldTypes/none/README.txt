@@ -3,7 +3,7 @@
 *
 * Version 0.0.1 / 2008-10-27
 *
-* (c) 2008: Bernhard Kraft <kraftb@kraftb.at>
+* (c) 2008-2010: Bernhard Kraft <kraftb@think-open.at>
 *
 *
 * 

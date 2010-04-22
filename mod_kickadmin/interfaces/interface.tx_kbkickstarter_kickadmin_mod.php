@@ -2,7 +2,7 @@
 /***************************************************************
 *  Copyright notice
 *  
-*  (c) 2008 Bernhard Kraft (kraftb@kraftb.at)
+*  (c) 2008-2010 Bernhard Kraft (kraftb@think-open.at)
 *  All rights reserved
 *
 *  This script is part of the TYPO3 project. The TYPO3 project is 
@@ -24,7 +24,7 @@
 /** 
  * interface class for sub-modules for module 'Kick Admin' for the 'kb_kickstarter' extension.
  *
- * @author	Bernhard Kraft <kraftb@kraftb.at>
+ * @author	Bernhard Kraft <kraftb@think-open.at>
  */
 
 interface tx_kbkickstarter_kickadmin_mod {

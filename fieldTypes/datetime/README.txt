@@ -3,7 +3,7 @@
 *
 * Version 0.0.1 / 2008-10-04
 *
-* (c) 2008: Thomas Peterson <info@thomas-peterson.de>
+* (c) 2008-2010: Thomas Peterson <info@thomas-peterson.de>
 *
 *
 * 
