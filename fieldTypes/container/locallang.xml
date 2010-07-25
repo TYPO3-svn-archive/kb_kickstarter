@@ -9,6 +9,7 @@
 			<label index="property_name"></label>
 			<label index="field.table"></label>
 			<label index="field.parentPointer"></label>
+			<label index="field.parentPointer.none"></label>
 			<label index="field.maxitems"></label>
 			<label index="field.minitems"></label>
 			<label index="field.collapseAll"></label>
@@ -28,9 +29,28 @@
 			<label index="property_name">Container</label>
 			<label index="field.table">Inline table</label>
 			<label index="field.parentPointer">Parent pointer</label>
+			<label index="field.parentPointer.none">[none]</label>
 			<label index="field.maxitems">Maximal items</label>
 			<label index="field.minitems">Minimal items</label>
 			<label index="field.appearance">Appearance</label>
+			<label index="field.collapseAll">All collapsed by default</label>
+			<label index="field.expandSingle">Only expand single item</label>
+			<label index="field.addTitle">Add table title to "new" link</label>
+			<label index="field.linkPosition">Position of "new link</label>
+			<label index="field.linkPosition.top">On top</label>
+			<label index="field.linkPosition.bottom">On bottom</label>
+			<label index="field.linkPosition.both">On top and bottom</label>
+			<label index="field.linkPosition.none">No link</label>
+			<label index="field.useSortable">Drag&amp;Drop sorting</label>
+		</languageKey>
+		<languageKey index="de" type="array">
+			<label index="property_name">Container</label>
+			<label index="field.table">Inline Tabelle</label>
+			<label index="field.parentPointer">Zeiger auf Elternelement</label>
+			<label index="field.parentPointer.none">[keines]</label>
+			<label index="field.maxitems">Maximale Einträge</label>
+			<label index="field.minitems">Minimale Einträge</label>
+			<label index="field.appearance">Aussehen</label>
 			<label index="field.collapseAll">All collapsed by default</label>
 			<label index="field.expandSingle">Only expand single item</label>
 			<label index="field.addTitle">Add table title to "new" link</label>

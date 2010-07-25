@@ -1,8 +1,13 @@
 {include file="_basics/dyn_tca_php/prop_header.tpl"}
 				'type' => 'inline',
 				'foreign_table' => '{$property.config.table}',
-//				'foreign_field' => '{$table.full_alias}__{$property.full_alias}__parent',
+
+{if $property.config.parentPointer}
 				'foreign_field' => '{$property.config.parentPointer}',
+{else}
+				'foreign_field' => '{$table.full_alias}__{$property.full_alias}__parent',
+{/if}
+
 {if $property.config.maxitems}
 				'maxitems' => '{$property.config.maxitems}',
 {/if}

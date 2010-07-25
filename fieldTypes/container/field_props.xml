@@ -30,6 +30,12 @@
 								<size>1</size>
 								<itemsProcFunc>EXT:kb_kickstarter/class.tx_kbkickstarter_itemsProc.php:&amp;tx_kbkickstarter_itemsProc-&gt;tableFields</itemsProcFunc>
 								<foreignTableField>table</foreignTableField>
+								<items>
+									<numIndex index="0" type="array">
+										<numIndex index="0">LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.parentPointer.none</numIndex>
+										<numIndex index="1">0</numIndex>
+									</numIndex>
+								</items>
 							</config>
 						</TCEforms>
 					</parentPointer>
