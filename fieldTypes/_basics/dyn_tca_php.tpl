@@ -20,6 +20,9 @@ $TCA['{$table.full_alias}'] = Array(
 {if $table.enableStartStop}
 {include file="_basics/dyn_tca_php/prop_startstop.tpl"}
 {/if}
+{if $table.enableLocalization}
+{include file="_basics/dyn_tca_php/prop_localization.tpl"}
+{/if}
 {if $table.enableAccessControl}
 {include file="_basics/dyn_tca_php/prop_fe_group.tpl"}
 {/if}

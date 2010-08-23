@@ -26,8 +26,9 @@
 			<label index="tx_kbkickstarter_tables.sortFields.tstamp_desc">DESC: Last modification</label>
 			<label index="tx_kbkickstarter_tables.standardPages">Allow table on standard pages</label>
 			<label index="tx_kbkickstarter_tables.icon_default">Table icon (default)</label>
-			<label index="tx_kbkickstarter_tables.enableHide">Enablde Visibility (hidden)</label>
-			<label index="tx_kbkickstarter_tables.enableStartStop">Enablde Time-Control (starttime/endtime)</label>
+			<label index="tx_kbkickstarter_tables.enableHide">Enable Visibility (hidden)</label>
+			<label index="tx_kbkickstarter_tables.enableStartStop">Enable Time-Control (starttime/endtime)</label>
+			<label index="tx_kbkickstarter_tables.enableLocalization">Enable Localization</label>
 			<label index="tx_kbkickstarter_tables.enableAccessControl">Enable Access-Control</label>
 			<label index="tx_kbkickstarter_tables.datetimeStartStop">Start/Stop as DateTime</label>
 			<label index="tx_kbkickstarter_tables.ownerField">FE-User owner field</label>

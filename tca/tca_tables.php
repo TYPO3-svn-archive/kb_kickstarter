@@ -151,6 +151,14 @@ $TCA['tx_kbkickstarter_tables'] = Array (
 				'type' => 'check',
 			),
 		),
+		'enableLocalization' => Array (
+			'exclude' => 1,
+			'label' => 'LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.enableLocalization',
+			'config' => Array (
+				'type' => 'check',
+				'default' => '1',
+			),
+		),
 		'datetimeStartStop' => Array (
 			'exclude' => 1,
 			'label' => 'LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.datetimeStartStop',
@@ -179,7 +187,7 @@ $TCA['tx_kbkickstarter_tables'] = Array (
 		),
 	),
 	'types' => Array (
-		'0' => Array('showitem' => 'name, alias;;1, icon_default;;;;2-2-2, hasFields, labelFields, sortFields, standardPages, ownerField, enableHide;;;;3-3-3, enableStartStop;;2, enableAccessControl'),
+		'0' => Array('showitem' => 'name, alias;;1, icon_default;;;;2-2-2, hasFields, labelFields, sortFields, standardPages, ownerField, enableHide;;;;3-3-3, enableStartStop;;2, enableAccessControl, enableLocalization'),
 	),
 	'palettes' => Array (
 		'1' => Array('showitem' => 'hidden, no_prefix'),

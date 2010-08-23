@@ -15,4 +15,8 @@
 {/if}{if $table.enableAccessControl}
 	fe_group varchar(100) DEFAULT '0' NOT NULL,
 {/if}
-
+{if $table.enableLocalization}
+	sys_language_uid int(11) DEFAULT '0' NOT NULL,
+	l18n_parent int(11) DEFAULT '0' NOT NULL,
+	l18n_diffsource mediumblob NOT NULL,
+{/if}

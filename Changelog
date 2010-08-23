@@ -1,3 +1,7 @@
+2010-08-23 Bernhard Stähli <ben@grooves.ch>
+
+	* Added localization support. A checkbox in the table record enables localization.
+
 2010-07-25  Bernhard Kraft  <kraftb@think-open.at>
 
 	* Changes to container fields, so selecting parent-field is now obligatory. If no parent field is selected a default one gets created

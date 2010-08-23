@@ -69,6 +69,11 @@ $TCA['{$table.full_alias}'] = Array(
 {/if}
 		),
 {/if}
+{if $table.enableLocalization}
+		'languageField' => 'sys_language_uid',
+		'transOrigPointerField' => 'l18n_parent',
+		'transOrigDiffSourceField' => 'l18n_diffsource',
+{/if}
 {if $table.rootLevel}
 		'rootLevel' => 1,
 {/if}

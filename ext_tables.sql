@@ -48,6 +48,7 @@ CREATE TABLE tx_kbkickstarter_tables (
 	`enableHide` tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	`enableStartStop` tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	`enableAccessControl` tinyint(4) unsigned DEFAULT '0' NOT NULL,
+	`enableLocalization` tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	`datetimeStartStop` tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	`no_prefix` tinyint(4) unsigned DEFAULT '0' NOT NULL,
 	`rootLevel` tinyint(4) unsigned DEFAULT '0' NOT NULL,

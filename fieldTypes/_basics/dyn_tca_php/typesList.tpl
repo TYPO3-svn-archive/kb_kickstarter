@@ -2,6 +2,9 @@
 {if $table.enableHide}
 hidden, 
 {/if}
+{if $table.enableLocalization}
+l18n_parent,sys_language_uid,
+{/if}
 {foreach from=$table.fieldRows key=property_key item=property name=types_Iter}
 	{if (!$smarty.foreach.types_Iter.first) || $table.enableHide}, {/if}
 	{if "tab" == $property.type}
