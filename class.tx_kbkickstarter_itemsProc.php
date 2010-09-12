@@ -70,8 +70,21 @@ class tx_kbkickstarter_itemsProc {
 
 	function removeNonSelected(&$params, &$parentObj) {
 		$curValField = $params['config']['itemsProcFuncParams']['field'];
-		if ($curValField && isset($params['row'][$curValField])) {
-			$allowValues = t3lib_div::intExplode(',', $params['row'][$curValField]);
+		$resolveFields = t3lib_div::trimExplode('|', $curValField);
+		if (count($resolveFields) === 1) {
+			$useRow = $params['row'];
+			$valField = $curValField;
+		} else {
+			$miscObj = tx_kbkickstarter_misc::singleton();
+			$result = $miscObj->resolveReferenceChain($resolveFields, $params['table'], $params['row']);
+			$resVal = $miscObj->implodeRecursive(',', $result);
+			$useRow = array(
+				'result' => $resVal,
+			);
+			$valField = 'result';
+		}
+		if ($valField && isset($useRow[$valField])) {
+			$allowValues = t3lib_div::intExplode(',', $useRow[$valField]);
 			$allowValues[] = 0;
 			foreach ($params['items'] as $itemIdx => $itemValue) {
 				if (!in_array(abs(intval($itemValue[1])), $allowValues)) {

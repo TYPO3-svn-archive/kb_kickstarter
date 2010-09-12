@@ -88,15 +88,28 @@ class tx_kbkickstarter_tables {
 	public function loadTables()	{
 		$tables_table = $this->configObj->getTable_TABLES();
 		$fields_table = $this->configObj->getTable_FIELDS();
+		$typeconfig_table = $this->configObj->getTable_TYPECONFIG();
 		$mm_table_fields = $this->configObj->getTable_FIELDS_IN_TABLES();
 		$mm_table_labels = $this->configObj->getTable_LABELS_OF_TABLES();
 		$mm_table_sorting = $this->configObj->getTable_SORTING_OF_TABLES();
+		$mm_table_typeconfig_fields = $this->configObj->getTable_FIELDS_IN_TYPECONFIG();
+		$typeconfig_parent = $this->configObj->getField_TYPECONFIG_PARENT();
 		$tables_whereClause = t3lib_BEfunc::deleteClause($tables_table);
 		$tableRows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', $tables_table, '1=1 '.$tables_whereClause, '', 'uid', '', 'uid');
+		$typeconfigSubdef = array(
+			'table' => $typeconfig_table,
+			'parentPointer' => $typeconfig_parent,
+			'fieldProcessing' => array(
+				'fieldRows' => array(
+					'mm_table' => $mm_table_typeconfig_fields,
+				),
+			),
+		);
 		foreach ($tableRows as $tableIdx => $tableRow)	{
 			$tableRows[$tableIdx]['fieldRows'] = $this->loadFields($mm_table_fields, intval($tableRow['uid']));
 			$tableRows[$tableIdx]['labelFields'] = $this->loadFields($mm_table_labels, intval($tableRow['uid']));
 			$tableRows[$tableIdx]['sortFields'] = $this->loadFields($mm_table_sorting, intval($tableRow['uid']));
+			$tableRows[$tableIdx]['typeConfig'] = $this->loadSubTables(intval($tableRow['uid']), $typeconfigSubdef);
 			if ($tableRow['ownerField']) {
 				$tableRows[$tableIdx]['ownerFieldRecord'] = t3lib_BEfunc::getRecord($fields_table, $tableRow['ownerField']);
 			}
@@ -153,6 +166,29 @@ class tx_kbkickstarter_tables {
 			}
 		}
 		return $validRows;
+	}
+
+	/**
+	 * Loads all type-field configuration records for the passed table
+	 *
+	 * @param integer The UID of the table for which to retrieve the sub records
+	 * @param array An array with information about from which table to fetch each sub record
+	 * @return array All sub records of the configured table
+	 */
+	private function loadSubTables($parentUid, $subConfig) {
+		$subTables_whereClause = t3lib_BEfunc::deleteClause($subConfig['table']);
+		$whereClause = $subConfig['parentPointer'].'='.$parentUid.' '.$subTables_whereClause;
+		$subTableRows = $GLOBALS['TYPO3_DB']->exec_SELECTgetRows('*', $subConfig['table'], $whereClause, '', 'uid', '', 'uid');
+		if (count($subTableRows)) {
+			foreach ($subTableRows as $index => $subTable) {
+				if (is_array($subConfig['fieldProcessing']) && count($subConfig['fieldProcessing'])) {
+					foreach ($subConfig['fieldProcessing'] as $resultKey => $fieldConfig) {
+						$subTableRows[$index][$resultKey] = $this->loadFields($fieldConfig['mm_table'], intval($subTable['uid']));
+					}
+				}
+			}
+		}
+		return $subTableRows;
 	}
 
 	/**
@@ -366,10 +402,13 @@ class tx_kbkickstarter_tables {
 	/**
 	 * Sanitizes the alias and sets the full alias containing the prefix
 	 *
-	 * @param		string		The value which shall get validated
-	 * @return	string		The passed value, filtered for characters allowed for aliases
+	 * @param array The table/field record for which the full alias should get set
+	 * @param array The table record in which the field alias being sanitized is found in. In the case of sanitizing a table the same parameter as the first one
+	 * @param array The field record by which the prefix should get retrieved. For sanitizing fields this is usually the same as the first parameter
+	 * @param boolean When this parameter is set the sanitized field name without an prefix will get returned
+	 * @return string The requested table/field alias, filtered for characters allowed for aliases and prefixed apropriately
 	 */
-	private function saneAlias($row, $table, $field = false, $noPrefix = false) {
+	public function saneAlias($row, $table, $field = false, $noPrefix = false) {
 		$row['alias'] = $this->validAlias($row['alias']);
 		if ($row['no_prefix'] || $noPrefix) {
 			$row['full_alias'] = $row['alias'];

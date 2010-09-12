@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<description>Table labels for kb_kickstarter table "Typeconfig"</description>
+		<type>database</type>
+		<csh_table></csh_table>
+		<fileId>EXT:kb_kickstarter/llxml/locallang_db_typeconfig.xml</fileId>
+		<labelContext type="array">
+			<label index="tx_kbkickstarter_typeconfig"></label>
+		</labelContext>
+		<ext_filename_template>EXT:csh_###LANGKEY###/kb_kickstarter/###LANGKEY###.locallang_db_typeconfig.xml</ext_filename_template>
+		<keep_original_text type="integer">1</keep_original_text>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_kbkickstarter_typeconfig">Kickstarter: Typeconfig</label>
+			<label index="tx_kbkickstarter_typeconfig.parentRecord">Parent table</label>
+			<label index="tx_kbkickstarter_typeconfig.typeFieldValue">Switch value</label>
+			<label index="tx_kbkickstarter_typeconfig.hasFields">Show fields</label>
+		</languageKey>
+	</data>
+</T3locallang>

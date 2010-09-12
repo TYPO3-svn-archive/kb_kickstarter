@@ -12,6 +12,7 @@ $TCA['tx_kbkickstarter_tables'] = Array (
 		'cruser_id' => 'cruser_id',
 		'sortby' => 'sorting',
 		'delete' => 'deleted',
+		'dividers2tabs' => 1,
 		'enablecolumns' => Array (
 			'disabled' => 'hidden',
 		),
@@ -19,7 +20,7 @@ $TCA['tx_kbkickstarter_tables'] = Array (
 		'iconfile' => RELPATH_kb_kickstarter.'icons/icon_tables.png',
 	),
 	'feInterface' => Array (
-		'fe_admin_fieldList' => 'hidden, name, alias, no_prefix, element_icon, hasFields, enableHide, enableStartStop, datetimeStartStop, enableAccessControl, ownerField, sortFields, standardPages',
+		'fe_admin_fieldList' => 'hidden, name, alias, no_prefix, element_icon, hasFields, enableHide, enableStartStop, datetimeStartStop, enableAccessControl, ownerField, sortFields, typeField, typeConfig, standardPages',
 	)
 );
 

@@ -17,13 +17,18 @@
 			<label index="tx_kbkickstarter_tables.name">Table name (default language)</label>
 			<label index="tx_kbkickstarter_tables.alias">Table alias (database name)</label>
 			<label index="tx_kbkickstarter_tables.no_prefix">No prefix</label>
+			<label index="tx_kbkickstarter_tables.tabFields">Field settings</label>
 			<label index="tx_kbkickstarter_tables.hasFields">Fields</label>
+			<label index="tx_kbkickstarter_tables.typeField">Field switch</label>
+			<label index="tx_kbkickstarter_tables.typeField.none">[none]</label>
+			<label index="tx_kbkickstarter_tables.typeConfig">Switch field configuration</label>
 			<label index="tx_kbkickstarter_tables.labelFields">Label fields</label>
 			<label index="tx_kbkickstarter_tables.sortFields">Sorting fields</label>
 			<label index="tx_kbkickstarter_tables.sortFields.crdate_asc">ASC: Creation date</label>
 			<label index="tx_kbkickstarter_tables.sortFields.crdate_desc">DESC: Creation date</label>
 			<label index="tx_kbkickstarter_tables.sortFields.tstamp_asc">ASC: Last modification</label>
 			<label index="tx_kbkickstarter_tables.sortFields.tstamp_desc">DESC: Last modification</label>
+			<label index="tx_kbkickstarter_tables.tabVisibility">Visibility / Access</label>
 			<label index="tx_kbkickstarter_tables.standardPages">Allow table on standard pages</label>
 			<label index="tx_kbkickstarter_tables.icon_default">Table icon (default)</label>
 			<label index="tx_kbkickstarter_tables.enableHide">Enable Visibility (hidden)</label>
@@ -33,6 +38,9 @@
 			<label index="tx_kbkickstarter_tables.datetimeStartStop">Start/Stop as DateTime</label>
 			<label index="tx_kbkickstarter_tables.ownerField">FE-User owner field</label>
 			<label index="tx_kbkickstarter_tables.ownerField.none">None</label>
+			<label index="tx_kbkickstarter_tables.tabLayout">Layout</label>
+			<label index="tx_kbkickstarter_tables.typesField">Layout switch field</label>
+			<label index="tx_kbkickstarter_tables.typesContainer">Layout setting</label>
 		</languageKey>
 	</data>
 </T3locallang>

@@ -1,3 +1,8 @@
+2010-09-12  Bernhard Kraft  <kraftb@think-open.at>
+
+	* Added the "types" feature which allows to have different fields depending on a select-box field
+	* Introducted tabs for table configuration
+
 2010-08-23 Bernhard Stähli <ben@grooves.ch>
 
 	* Added localization support. A checkbox in the table record enables localization.

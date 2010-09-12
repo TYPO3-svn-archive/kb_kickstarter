@@ -34,12 +34,17 @@
 class tx_kbkickstarter_config {
 	const configFileVersion = '0.0.1';
 
-	// Tables containing the field and table definitions
+		// Tables containing the field and table definitions
 	private $table_TABLES = 'tx_kbkickstarter_tables';
 	private $table_FIELDS = 'tx_kbkickstarter_fields';
+	private $table_TYPECONFIG = 'tx_kbkickstarter_typeconfig';
 	private $table_FIELDS_IN_TABLES = 'tx_kbkickstarter_tables_fields_mm';
 	private $table_LABELS_OF_TABLES = 'tx_kbkickstarter_tables_labelFields_mm';
 	private $table_SORTING_OF_TABLES = 'tx_kbkickstarter_tables_sortFields_mm';
+	private $table_FIELDS_IN_TYPECONFIG = 'tx_kbkickstarter_typeconfig_fields_mm';
+
+		// Some fields defining relations between tables
+	private $field_TYPECONFIG_PARENT = 'parentRecord';
 
 	// The name of this extension
 	private $extension;
@@ -207,6 +212,16 @@ class tx_kbkickstarter_config {
 
 
 	/**
+	 * Returns the name of the type-config table
+	 *
+	 * @return	string		The table used for storing type configurations of tables
+	 */
+	public function getTable_TYPECONFIG() {
+		return $this->table_TYPECONFIG;
+	}
+
+
+	/**
 	 * Returns the name of the table which stores information about which fields are used in which table (MM table)
 	 *
 	 * @return	string		The table used for storing field/table relations
@@ -226,12 +241,30 @@ class tx_kbkickstarter_config {
 	}
 
 	/**
-	 * Returns the name of the table which stores information about sorting fields for each tables (MM table)
+	 * Returns the name of the table used for storing field definitions of type-config records
+	 *
+	 * @return	string		The table used for storing field/table relations
+	 */
+	public function getTable_FIELDS_IN_TYPECONFIG() {
+		return $this->table_FIELDS_IN_TYPECONFIG;
+	}
+
+	/**
+	 * Returns the name of the table which 
 	 *
 	 * @return	string		The table used for storing field/table relations
 	 */
 	public function getTable_SORTING_OF_TABLES() {
 		return $this->table_SORTING_OF_TABLES;
+	}
+
+	/**
+	 * Returns the field name of the parent record pointer in the typeconfig table
+	 *
+	 * @return	string		The table used for storing field/table relations
+	 */
+	public function getField_TYPECONFIG_PARENT() {
+		return $this->field_TYPECONFIG_PARENT;
 	}
 
 	/**

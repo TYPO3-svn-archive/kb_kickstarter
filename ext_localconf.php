@@ -19,4 +19,9 @@ require_once(PATH_kb_kickstarter.'class.tx_kbkickstarter_fieldTypes.php');
 $fieldTyper = t3lib_div::makeInstance('tx_kbkickstarter_fieldTypes');
 $fieldTyper->initFieldTypes();
 
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tceforms.php']['getSingleFieldClass']['kb_kickstarter'] = 'EXT:kb_kickstarter/class.tx_kbkickstarter_fieldClone.php:tx_kbkickstarter_fieldClone';
+
+$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['t3lib/class.t3lib_tcemain.php']['processDatamapClass']['kb_kickstarter'] = 'EXT:kb_kickstarter/class.tx_kbkickstarter_fieldClone.php:tx_kbkickstarter_fieldClone';
+
 ?>

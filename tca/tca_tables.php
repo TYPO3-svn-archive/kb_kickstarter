@@ -6,7 +6,7 @@ if (!defined('TYPO3_MODE')) {
 $TCA['tx_kbkickstarter_tables'] = Array (
 	'ctrl' => &$TCA['tx_kbkickstarter_tables']['ctrl'],
 	'interface' => Array (
-		'showRecordFieldList' => 'hidden, name, alias, no_prefix, icon_default, hasFields, labelFields, sortFields',
+		'showRecordFieldList' => 'hidden, name, alias, no_prefix, icon_default, hasFields, typeField, typeConfig, labelFields, sortFields',
 	),
 	'feInterface' => &$TCA['tx_kbkickstarter_tables']['feInterface'],
 	'columns' => Array (
@@ -73,6 +73,42 @@ $TCA['tx_kbkickstarter_tables'] = Array (
 				'minitems' => 1,
 				'maxitems' => 100,
 				'autoSizeMax' => 20,
+			),
+		),
+		'typeField' => Array (
+			'exclude' => 1,
+			'label' => 'LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.typeField',
+			'config' => Array (
+				'type' => 'select',
+				'foreign_table' => 'tx_kbkickstarter_fields',
+				'foreign_table_where' => ' AND tx_kbkickstarter_fields.hidden=0 ORDER BY tx_kbkickstarter_fields.sorting',
+				'itemsProcFunc' => 'EXT:kb_kickstarter/class.tx_kbkickstarter_itemsProc.php:&tx_kbkickstarter_itemsProc->removeNonSelected',
+				'itemsProcFuncParams' => Array(
+					'field' => 'hasFields',
+				),
+				'items' => Array(
+					array('LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.typeField.none', '0'),
+				),
+				'size' => 1,
+			),
+		),
+		'typeConfig' => Array (
+			'exclude' => 1,
+			'label' => 'LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.typeConfig',
+			'displayCond' => 'FIELD:typeField:REQ:true',
+			'config' => Array (
+				'type' => 'inline',
+				'foreign_table' => 'tx_kbkickstarter_typeconfig',
+				'appearance' => Array(
+					'collapseAll' => 1,
+					'newRecordLinkAddTitle' => 1,
+					'newRecordLinkPosition' => 'bottom',
+					'useSortable' => 1,
+				),
+				'foreign_field' => 'parentRecord',
+				'size' => 1,
+				'maxitems' => 50,
+				'minitems' => 0,
 			),
 		),
 		'labelFields' => Array (
@@ -187,7 +223,7 @@ $TCA['tx_kbkickstarter_tables'] = Array (
 		),
 	),
 	'types' => Array (
-		'0' => Array('showitem' => 'name, alias;;1, icon_default;;;;2-2-2, hasFields, labelFields, sortFields, standardPages, ownerField, enableHide;;;;3-3-3, enableStartStop;;2, enableAccessControl, enableLocalization'),
+		'0' => Array('showitem' => 'name, alias;;1, icon_default;;;;2-2-2, --div--;LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.tabFields, hasFields, labelFields, sortFields, typeField, typeConfig, --div--;LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.tabVisibility, standardPages, ownerField, enableHide;;;;3-3-3, enableStartStop;;2, enableAccessControl, enableLocalization, --div--;LLL:EXT:kb_kickstarter/llxml/locallang_db_tables.xml:tx_kbkickstarter_tables.tabLayout, typesField, typesContainer'),
 	),
 	'palettes' => Array (
 		'1' => Array('showitem' => 'hidden, no_prefix'),

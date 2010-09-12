@@ -47,6 +47,15 @@ $TCA['{$table.full_alias}'] = Array(
 		'tstamp' => 'tstamp',
 		'crdate' => 'crdate',
 		'cruser_id' => 'cruser_id',
+{if $table.typeField}
+		'type' => '{strip}
+{foreach from=$table.fieldRows key=property_key item=property name=fe_admin_fieldList_Iter}
+	{if $property.uid == $table.typeField}
+		{$property.full_alias}
+	{/if}
+{/foreach}
+			{/strip}',
+{/if}
 {if $table._sortFields}
 		'default_sortby' => 'ORDER BY {$table._sortFields}',
 {else}
