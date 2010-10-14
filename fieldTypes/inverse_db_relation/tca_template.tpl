@@ -25,10 +25,10 @@
 {if $property.config.minitems}
 				'minitems' => '{$property.config.minitems}',
 {/if}
-{if $property.config.useMM}
+
 				'MM' => '{$property.config.allowed}__{$property.config.fieldMatching|regex_replace:"/^tx_kbks_/":""}__MM',
 				'MM_opposite_field' => '{$property.config.fieldMatching}',
-{/if}
+
 {if $property.config.styleSelected}
 				'selectedListStyle' => '{$property.config.styleSelected}',
 {/if}

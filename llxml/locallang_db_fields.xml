@@ -21,6 +21,10 @@
 			<label index="xml.prop_l10n_mode.mergeIfNotBlank"></label>
 			<label index="xml.prop_l10n_mode.noCopy"></label>
 			<label index="xml.prop_l10n_mode.prefixLangTitle"></label>
+			<label index="xml.prop_l10n_display"></label>
+			<label index="xml.prop_l10n_display.default"></label>
+			<label index="xml.prop_l10n_display.hideDiff"></label>
+			<label index="xml.prop_l10n_display.defaultAsReadonly"></label>
 			<label index="xml.field_readOnly"></label>
 		</labelContext>
 		<ext_filename_template>EXT:csh_###LANGKEY###/kb_kickstarter/###LANGKEY###.locallang_db_fields.xml</ext_filename_template>
@@ -38,12 +42,16 @@
 			<label index="xml.sheet.basic">Basic settings</label>
 			<label index="xml.sheet.advanced">Advanced settings</label>
 			<label index="xml.sheet.language">Language settings</label>
-			<label index="xml.prop_l10n_mode">Translation mode</label>
+			<label index="xml.prop_l10n_mode">Translation mode (l10_mode)</label>
 			<label index="xml.prop_l10n_mode.default">Copy value</label>
 			<label index="xml.prop_l10n_mode.exclude">Do not translate</label>
 			<label index="xml.prop_l10n_mode.mergeIfNotBlank">Use if not blank</label>
 			<label index="xml.prop_l10n_mode.noCopy">Use translated / not copied</label>
 			<label index="xml.prop_l10n_mode.prefixLangTitle">Use translated / prefixed</label>
+			<label index="xml.prop_l10n_display">Translation display (l10_display)</label>
+			<label index="xml.prop_l10n_display.default">Based on translation mode</label>
+			<label index="xml.prop_l10n_display.hideDiff">Hide differences between original</label>
+			<label index="xml.prop_l10n_display.defaultAsReadonly">Show original translation as read only</label>
 			<label index="xml.field_readOnly">Read only</label>
 		</languageKey>
 	</data>

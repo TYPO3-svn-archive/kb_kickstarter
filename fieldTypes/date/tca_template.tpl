@@ -2,7 +2,11 @@
 				'type' => 'input',
 				'size' => '12',
 				'max' => '20',
+{if $property.config.required}
+				'eval' => 'date,required',
+{else}
 				'eval' => 'date',
+{/if}
 {if $property.config.default}
 				'default' => '{$property.config.default}',
 				'checkbox' => '{$property.config.default}',

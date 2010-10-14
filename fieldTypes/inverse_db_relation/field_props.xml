@@ -143,11 +143,10 @@
 				<el>
 					<useMM type="array">
 						<TCEforms>
-							<label>LLL:EXT:kb_kickstarter/fieldTypes/inverse_db_relation/locallang.xml:field.useMM</label>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/database_relation/locallang.xml:field.useMM</label>
 							<config>
 								<type>check</type>
 								<default>1</default>
-								<readOnly>1</readOnly>
 							</config>
 						</TCEforms>
 					</useMM>

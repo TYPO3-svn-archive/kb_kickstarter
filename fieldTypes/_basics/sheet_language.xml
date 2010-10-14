@@ -44,6 +44,30 @@
 						</config>
 					</TCEforms>
 				</prop_l10n_mode>
+
+				<prop_l10n_display type="array">
+					<TCEforms>
+						<label>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_display</label>
+						<config>
+							<type>select</type>
+							<size>3</size>
+							<maxitems>9999</maxitems>
+							<minitems>0</minitems>
+							<items type="array">
+								<numIndex index="0" type="array">
+									<numIndex index="0">LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_display.hideDiff</numIndex>
+									<numIndex index="1">hideDiff</numIndex>
+									<numIndex index="2"></numIndex>
+								</numIndex>
+								<numIndex index="1" type="array">
+									<numIndex index="0">LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.prop_l10n_display.defaultAsReadonly</numIndex>
+									<numIndex index="1">defaultAsReadonly</numIndex>
+									<numIndex index="2"></numIndex>
+								</numIndex>
+							</items>
+						</config>
+					</TCEforms>
+				</prop_l10n_display>
 		</el>
 	</ROOT>
 </T3DataStructure>

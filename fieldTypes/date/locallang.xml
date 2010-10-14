@@ -15,6 +15,7 @@
 	<data type="array">
 		<languageKey index="default" type="array">
 			<label index="property_name">Date</label>
+			<label index="field.prop_required">Required</label>
 			<label index="field.prop_default">Default value</label>
 		</languageKey>
 	</data>

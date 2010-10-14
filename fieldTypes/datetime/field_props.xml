@@ -23,6 +23,14 @@
 							</config>
 						</TCEforms>
 					</prop_default>
+					<required type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/date/locallang.xml:field.prop_required</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</required>
 					<readOnly type="array">
 						<TCEforms>
 							<label>LLL:EXT:kb_kickstarter/llxml/locallang_db_fields.xml:xml.field_readOnly</label>

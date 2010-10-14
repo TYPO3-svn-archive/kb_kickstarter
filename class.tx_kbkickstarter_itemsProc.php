@@ -42,7 +42,7 @@ class tx_kbkickstarter_itemsProc {
 			$labelASC = $GLOBALS['LANG']->sL($params['config']['labelASC']);
 			$labelDESC = $GLOBALS['LANG']->sL($params['config']['labelDESC']);
 		}
-		if (($params['row']['type']!=='database_relation') && ($params['row']['type']!=='container')) return;
+		if (($params['row']['type']!=='database_relation') && ($params['row']['type']!=='container') && ($params['row']['type']!=='inverse_db_relation')) return;
 		$flexData = t3lib_div::xml2array($params['row']['flexconfig']);
 		if (!is_array($flexData)) {
 			return;

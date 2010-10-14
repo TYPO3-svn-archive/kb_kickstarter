@@ -1,3 +1,10 @@
+2010-10-14 Bernhard Stähli <bs@devdev.ch>
+
+	* l10_display added for all field types, forge #9525
+	* "required" option for date and datetime
+	* inverse_db_relation bugfix: "MM Relation" defaults to 1, but is no more readonly, forge #9524
+	* other, small bug and label fixes
+
 2010-09-12  Bernhard Kraft  <kraftb@think-open.at>
 
 	* Added the "types" feature which allows to have different fields depending on a select-box field
