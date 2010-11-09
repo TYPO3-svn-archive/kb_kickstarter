@@ -1,4 +1,6 @@
 {include file="_basics/dyn_tca_php/prop_header.tpl"}
+
+{assign var='foreignTable' value=$property.config.allowed}
 {if $property.config.relationType=="group"}
 				'type' => 'group',
 				'internal_type' => 'db',
@@ -9,7 +11,16 @@
 				'type' => 'select',
 				'foreign_table' => '{$property.config.allowed}',
 {if ($property.config.same_page) || ($property.config.pages|regex_replace:"/[^0-9,]/":"") || $property.config.fieldMatching || $property.config.fieldSorting}
-				'foreign_table_where' => '{if $property.config.same_page} AND ###REC_FIELD_pid###={$property.config.allowed}.pid{/if}{if ($property.config.pages|regex_replace:"/[^0-9,]/":"")} AND {$property.config.allowed}.pid IN ({$property.config.pages|regex_replace:"/[^0-9,]/":""}){/if}{if $property.config.fieldSorting} ORDER BY {$property.config.fieldSorting}{/if}',
+				'foreign_table_where' => '{strip}
+					{if $property.config.same_page} AND ###REC_FIELD_pid###={$property.config.allowed}.pid
+					{/if}
+					{if ($property.config.pages|regex_replace:"/[^0-9,]/":"")} AND {$property.config.allowed}.pid IN ({$property.config.pages|regex_replace:"/[^0-9,]/":""})
+					{/if}
+					{if $TCA.$foreignTable.ctrl.languageField} AND {$foreignTable}.{$TCA.$foreignTable.ctrl.languageField}=0
+					{/if}
+					{if $property.config.fieldSorting} ORDER BY {$property.config.fieldSorting}
+					{/if}
+					',{/strip}
 {/if}
 {/if}
 				'size' => '{$property.config.size}',
@@ -25,10 +36,11 @@
 {if $property.config.minitems}
 				'minitems' => '{$property.config.minitems}',
 {/if}
-
+{if $property.config.useMM}
+				// inverse db relation - should always MM
 				'MM' => '{$property.config.allowed}__{$property.config.fieldMatching|regex_replace:"/^tx_kbks_/":""}__MM',
 				'MM_opposite_field' => '{$property.config.fieldMatching}',
-
+{/if}
 {if $property.config.styleSelected}
 				'selectedListStyle' => '{$property.config.styleSelected}',
 {/if}

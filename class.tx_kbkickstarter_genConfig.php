@@ -285,6 +285,7 @@ class tx_kbkickstarter_genConfig {
 	private function get_localSmarty($table) {
 		$smarty = $this->rootObj->clone_smarty();
 		$smarty->setSmartyVar('template_dir','EXT:'.$this->extension.'/fieldTypes');
+		$smarty->assign('TCA', $GLOBALS['TCA']);
 		$smarty->assign('table', $table);
 		$smarty->assign('configObj', $this->configObj);
 		$smarty->assign('configExtension', $this->configObj->get_configExtension());

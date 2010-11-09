@@ -1,3 +1,8 @@
+2010-11-09 Bernhard Stähli <bs@devdev.ch>
+
+	* #9507 / added " AND $foreignTable.sys_language_uid=0 " for db relations to a table with enabled localization
+	* fixed bug in field type inverse db relation (wrong foreign_where generated)
+
 2010-10-14 Bernhard Stähli <bs@devdev.ch>
 
 	* l10_display added for all field types, forge #9525
