@@ -184,15 +184,15 @@ class tx_kbkickstarter_kickadmin_genConfig extends tx_kbkickstarter_kickadmin_mo
 	 * @return		void
 	 */
 	function updateDB($force = false) {
-		$this->initEMobj();
-		list($list,) = $this->EMobj->getInstalledExtensions();
+		//$this->initEMobj();
+		list($list,) = $this->getInstalledExtensionsWrapper();
 		$configExt = $this->configObj->get_configExtension();
 		$extInfo = $list[$configExt];
 		$db_update = $this->checkDBupdate();
 		if ($db_update['required']) {
-			$this->EMobj->forceDBupdates($configExt, $extInfo);
+			$this->forceDBupdatesWrapper($configExt, $extInfo);
 		} elseif ($force) {
-			$this->EMobj->forceDBupdates($configExt, $extInfo);
+			$this->forceDBupdatesWrapper($configExt, $extInfo);
 		}
 	}
 
@@ -202,11 +202,11 @@ class tx_kbkickstarter_kickadmin_genConfig extends tx_kbkickstarter_kickadmin_mo
 	 * @return		array				Information if update is required and links for updating the database
 	 */
 	function checkDBupdate() {
-		$this->initEMobj();
-		list($list,) = $this->EMobj->getInstalledExtensions();
+		//$this->initEMobj();
+		list($list,) = $this->getInstalledExtensionsWrapper();
 		$configExt = $this->configObj->get_configExtension();
 		$extInfo = $list[$configExt];
-		$dbStatus = $this->EMobj->checkDBupdates($configExt, $extInfo, 1);
+		$dbStatus = $this->checkDBupdatesWrapper($configExt, $extInfo);
 		$dbStatus = $dbStatus['structure']['diff'];
 		$required = false;
 		if ($dbStatus['extra'] && count($dbStatus['extra'])) {

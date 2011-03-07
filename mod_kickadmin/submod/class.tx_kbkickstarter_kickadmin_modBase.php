@@ -27,7 +27,13 @@
  * @author	Bernhard Kraft <kraftb@think-open.at>
  */
 
+if (tx_kbkickstarter_kickadmin_modBase::isModernEM()) {
+	require_once(PATH_typo3.'sysext/em/classes/extensions/class.tx_em_extensions_list.php');
+	require_once(PATH_typo3.'sysext/em/classes/install/class.tx_em_install.php');
+}
+
 require_once(PATH_kb_kickstarter.'mod_kickadmin/interfaces/interface.tx_kbkickstarter_kickadmin_mod.php');
+
 
 class tx_kbkickstarter_kickadmin_modBase {
 	protected $parentObj = null;
@@ -75,7 +81,9 @@ class tx_kbkickstarter_kickadmin_modBase {
 	}
 
 	/**
+	 * This is the OLD WAY (prior to 4.4 or 4.3)
 	 * Initializes the extensionManager object instance for update/modification of database and installing of extension
+	 *
 	 *
 	 * @return	void
 	 */
@@ -87,6 +95,75 @@ class tx_kbkickstarter_kickadmin_modBase {
 		}
 	}
 
+	/**
+	 * uses class.tx_em_extensions_list.php to get full extension list.
+	 *
+	 * @return	void
+	 */
+	function getInstalledExtensionsWrapper() {
+
+		if (!$this->isModernEM()) {
+			$this->initEMobj();
+			$list = $this->EMobj->getInstalledExtensions();
+		} else {
+			$extensionList = $this->EMobj = t3lib_div::makeInstance('tx_em_Extensions_List');
+			$list = $extensionList->getInstalledExtensions(false);
+		}
+		return $list;
+	}
+
+	/**
+	 * uses class.tx_em_install.php to check for db update. fallback if older TYPO3
+	 *
+	 * @return	void
+	 */
+	function checkDBupdatesWrapper($configExt, $extInfo) {
+		if (!$this->isModernEM()) {
+			$this->initEMobj();
+			$status = $this->EMobj->checkDBupdates($configExt, $extInfo, 1);
+		} else {
+			$install = t3lib_div::makeInstance('tx_em_Install');
+			$status = $install->checkDBupdates($configExt, $extInfo, 1);
+		}
+		return $status;
+	}
+
+	/**
+	 * uses class.tx_em_install.php to force db update. fallback if older TYPO3
+	 *
+	 * @return	void
+	 */
+	function forceDBupdatesWrapper($configExt, $extInfo){
+		if (!$this->isModernEM()) {
+			$this->initEMobj();
+			$this->EMobj->forceDBupdates($configExt, $extInfo);
+		} else {
+			$install = $this->EMobj = t3lib_div::makeInstance('tx_em_Install');
+			$status = $install->forceDBupdates($configExt, $extInfo);
+		}
+		return $status;
+	}
+
+	function installExtensionWrapper($extName) {
+		if (!$this->isModernEM()) {
+			$this->initEMobj();
+			$this->EMobj->installExtension($configExt, $extInfo);
+		} else {
+			$install = t3lib_div::makeInstance('tx_em_Install');
+			$status = $install->installExtension($extName);
+		}
+		return $status;
+	}
+
+	function isModernEM() {
+		$version = explode('.', TYPO3_version);
+		if ($version[0] < 4 || $version[1] < 4) {
+			return false;
+		} else {
+			return true;
+		}
+	}
+	
 
 }
 

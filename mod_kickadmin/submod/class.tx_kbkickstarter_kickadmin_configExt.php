@@ -94,9 +94,8 @@ class tx_kbkickstarter_kickadmin_configExt extends tx_kbkickstarter_kickadmin_mo
 	 */
 	function installExtension($extName) {
 		if ($ext = $this->configExtensions[$extName]) {
-			if (!$ext['installed']) 	{
-				$this->initEMobj();
-				$status = $this->EMobj->installExtension($extName);
+			if (!$ext['installed']) {
+				$status = $this->installExtensionWrapper($extName);
 				if (!$status[0]) {
 					$this->resultInfo[] = $status[1];
 				}
