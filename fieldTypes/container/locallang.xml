@@ -42,6 +42,10 @@
 			<label index="field.linkPosition.both">On top and bottom</label>
 			<label index="field.linkPosition.none">No link</label>
 			<label index="field.useSortable">Drag&amp;Drop sorting</label>
+			<label index="field.useLocalization">Use Localization</label>
+			<label index="field.localizeChildrenAtParentLocalization">localizeChildrenAtParentLocalization</label>
+			<label index="field.showSynchronizationLink">showSynchronizationLink</label>
+			<label index="field.showAllLocalizationLink">showAllLocalizationLink</label>
 		</languageKey>
 		<languageKey index="de" type="array">
 			<label index="property_name">Container</label>
@@ -60,6 +64,9 @@
 			<label index="field.linkPosition.both">On top and bottom</label>
 			<label index="field.linkPosition.none">No link</label>
 			<label index="field.useSortable">Drag&amp;Drop sorting</label>
+			<label index="field.useLocalization">Use Localization</label>
+			<label index="field.localizeChildrenAtParentLocalization">localizeChildrenAtParentLocalization</label>
+
 		</languageKey>
 	</data>
 </T3locallang>

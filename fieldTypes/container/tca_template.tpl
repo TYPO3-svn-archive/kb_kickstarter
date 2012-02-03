@@ -20,6 +20,18 @@
 					'newRecordLinkAddTitle' => {if $property.config.addTitle}true{else}false{/if},
 					'newRecordLinkPosition' => '{$property.config.linkPosition}',
 					'useSortable' => '{$property.config.useSortable}',
+					'enabledControls' => array('info'=>false, 'sort'=>false),
+					'showSynchronizationLink' => {if $property.config.showSynchronizationLink}true{else}false{/if},
+					'showAllLocalizationLink' => {if $property.config.showAllLocalizationLink}true{else}false{/if},
 				),
+    			'behaviour' => array (
+{if $property.config.useLocalization}
+                    'localizationMode' => 'select', // use localization
+{/if}
+{if $property.config.localizeChildrenAtParentLocalization}
+                    'localizeChildrenAtParentLocalization' => true,
+{/if}
+    			),
+    			
 {include file="_basics/dyn_tca_php/prop_footer.tpl"}
 

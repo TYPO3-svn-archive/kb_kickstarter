@@ -122,6 +122,38 @@
 							</config>
 						</TCEforms>
 					</useSortable>
+					<useLocalization type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.useLocalization</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</useLocalization>
+					<localizeChildrenAtParentLocalization type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.localizeChildrenAtParentLocalization</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</localizeChildrenAtParentLocalization>
+					<showSynchronizationLink type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.showSynchronizationLink</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</showSynchronizationLink>
+					<showAllLocalizationLink type="array">
+						<TCEforms>
+							<label>LLL:EXT:kb_kickstarter/fieldTypes/container/locallang.xml:field.showAllLocalizationLink</label>
+							<config>
+								<type>check</type>
+							</config>
+						</TCEforms>
+					</showAllLocalizationLink>
 				</el>
 			</ROOT>
 		</sDEF>
