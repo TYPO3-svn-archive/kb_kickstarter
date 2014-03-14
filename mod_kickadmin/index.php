@@ -181,10 +181,7 @@ class tx_kbkickstarter_kickadmin extends t3lib_SCbase {
 		switch ($function) {
 			case 'genConfig':
 			case 'configExt':
-				require_once(PATH_kb_kickstarter.'mod_kickadmin/submod/class.tx_kbkickstarter_kickadmin_modBase.php');
 				$class = __CLASS__.'_'.$function;
-				$classFile = PATH_kb_kickstarter.'mod_kickadmin/submod/class.'.$class.'.php';
-				require_once($classFile);
 				$kickadmin_mod = t3lib_div::makeInstance($class);
 				$kickadmin_mod->init($this, $this);
 				$content = $kickadmin_mod->moduleContent();

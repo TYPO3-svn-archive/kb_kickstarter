@@ -31,8 +31,6 @@
 // TODO: Add "hasHidden" flag to a table-definition record
 // TODO: Add palettes generating to gentca and _basics/tca_template.tpl
 
-require_once(PATH_kb_kickstarter.'class.tx_kbkickstarter_tables.php');
-
 class tx_kbkickstarter_genConfig {
 	protected $parentObj = null;
 	protected $rootObj = null;

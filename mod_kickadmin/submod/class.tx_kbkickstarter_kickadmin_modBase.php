@@ -72,7 +72,6 @@ class tx_kbkickstarter_kickadmin_modBase {
 	protected function init_genConfigObj() {
 		if (!is_object($this->genConfigObj)) {
 			// Create object instance for generating TCA files
-			require_once(PATH_kb_kickstarter.'class.tx_kbkickstarter_genConfig.php');
 			$this->genConfigObj = t3lib_div::makeInstance('tx_kbkickstarter_genConfig');
 			$this->genConfigObj->init($this, $this->rootObj);
 		}
