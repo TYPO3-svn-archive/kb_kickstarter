@@ -3,10 +3,7 @@
 				'internal_type' => 'file',
 				'size' => '{$property.config.size}',
 				'uploadfolder' => 'uploads/ks_{$property.alias}_{$property.uid}',
-{php}
-$property = $this->get_template_vars('property');
-t3lib_div::mkdir_deep(PATH_site.'uploads/', 'ks_'.$property['alias'].'_'.$property['uid']);
-{/php}
+				{createDirectory base="uploads/" directory="ks_`$property.alias`_`$property.uid`"}
 {if $property.config.autoSizeMax}
 				'autoSizeMax' => '{$property.config.autoSizeMax}',
 {/if}

@@ -174,6 +174,7 @@ class tx_kbkickstarter_kickadmin extends t3lib_SCbase {
 		$this->smarty->setSmartyVar('caching', $this->cacheSmarty);
 		$this->smarty->setSmartyVar('compile_dir', 'typo3temp/smarty_compile');
 		$this->smarty->setSmartyVar('cache_dir', 'typo3temp/smarty_cache');
+		$this->smarty->registerPlugin('function', 'createDirectory', array('tx_kbkickstarter_Hooks_Smarty_CreateDirectory', 'createDirectory'));
 		$this->smarty->assign('configObj', $this->configObj);
 		$this->smarty->assign('extension', $this->extension);
 
