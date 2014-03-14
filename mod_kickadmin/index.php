@@ -170,7 +170,7 @@ class tx_kbkickstarter_kickadmin extends t3lib_SCbase {
 	private function moduleContent()	{
 		global $LANG;
 		$this->smarty = tx_smarty::smarty();
-		$this->smarty->setSmartyVar('template_dir','EXT:'.$this->extension.'/mod_kickadmin/res');
+		$this->smarty->setTemplateDir('EXT:'.$this->extension.'/mod_kickadmin/res');
 		$this->smarty->setSmartyVar('caching', $this->cacheSmarty);
 		$this->smarty->setSmartyVar('compile_dir', 'typo3temp/smarty_compile');
 		$this->smarty->setSmartyVar('cache_dir', 'typo3temp/smarty_cache');
