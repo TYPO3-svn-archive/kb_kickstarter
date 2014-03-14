@@ -11,7 +11,7 @@ l18n_parent,sys_language_uid,
 	{foreach from=$table.typeConfig key=configIndex item=typeConfig}
 		{foreach from=$typeConfig.fieldRows key=typeFieldIndex item=typeField}
 			{if (($property.uid == $typeField.uid) && (!$isTypeField || ($typeConfig.typeFieldValue == $currentType)))}
-				{assign var='isTypeField' value=`$typeConfig.typeFieldValue`}
+				{assign var='isTypeField' value="`$typeConfig.typeFieldValue`"}
 			{/if}
 		{/foreach}
 	{/foreach}

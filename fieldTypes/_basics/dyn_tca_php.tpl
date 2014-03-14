@@ -34,7 +34,7 @@ $TCA['{$table.full_alias}'] = Array(
 {assign var='currentType' value='0'}
 {include file="_basics/dyn_tca_php/typesList.tpl"}
 {foreach from=$table.typeConfig key=typeConfigIndex item=typeConfigData}
-{assign var='currentType' value=`$typeConfigData.typeFieldValue`}
+{assign var='currentType' value="`$typeConfigData.typeFieldValue`"}
 {include file="_basics/dyn_tca_php/typesList.tpl"}
 {/foreach}
 	),
