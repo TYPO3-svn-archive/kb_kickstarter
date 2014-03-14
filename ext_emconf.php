@@ -24,15 +24,14 @@ $EM_CONF[$_EXTKEY] = array(
 	'version' => '0.0.0',
 	'constraints' => array(
 		'depends' => array(
-			'typo3' => '4.1.0-',
+			'typo3' => '4.5.0-4.7.99',
 			'php' => '5.1.0-',
-			'cms' => '',
-			'smarty' => '1.4.0-',
-			'kb_config' => '0.1.0-',
+			'smarty' => '2.0.0-',
 		),
 		'conflicts' => array(
 		),
 		'suggests' => array(
+			'kb_config' => '0.1.0-',
 		),
 	),
 	'_md5_values_when_last_written' => '',
